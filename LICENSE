@@ -1,0 +1,79 @@
+LICENCIA DE PROPIEDAD INTELECTUAL — TODOS LOS DERECHOS RESERVADOS
+
+Repositorio: cerrajeria-landing-page (sitio web www.merafex.es)
+
+Copyright © 2026 Cerrajería Merafex, S.L.
+NIF: B88741087
+Todos los derechos reservados.
+
+================================================================================
+
+1. Titularidad
+
+Este repositorio y sitio web y todo su contenido — incluyendo, sin carácter limitativo,
+código fuente (HTML, CSS, JavaScript y scripts de herramientas), documentación,
+imágenes, fotografías, iconos, logotipos, gráficos, diseños, estilos, tipografías,
+archivos de configuración, traducciones y cualquier otro material — son propiedad
+intelectual de Cerrajería Merafex, S.L., salvo los componentes de terceros
+sujetos a sus propias licencias (p. ej. dependencias npm, Font Awesome).
+
+2. Restricciones
+
+Queda estrictamente prohibido, sin autorización previa y por escrito de
+Cerrajería Merafex, S.L.:
+
+a) Copiar, descargar, reproducir, distribuir, publicar o transmitir cualquier
+parte del código fuente, los assets o los materiales de este proyecto.
+
+b) Utilizar, reutilizar, adaptar, modificar, traducir o crear obras derivadas
+a partir del código, las imágenes, los estilos o cualquier otro contenido.
+
+c) Incorporar el código o los assets en otros sitios web, aplicaciones,
+plantillas, temas o productos comerciales o no comerciales.
+
+d) Realizar ingeniería inversa, descompilar o desensamblar el software con
+fines distintos a los permitidos expresamente por la ley aplicable.
+
+e) Utilizar el contenido para entrenar modelos de inteligencia artificial o
+sistemas de aprendizaje automático.
+
+f) Eliminar o alterar avisos de copyright, marcas o atribuciones.
+
+3. Uso permitido
+
+La única visualización permitida es la navegación ordinaria del sitio web
+publicado en www.merafex.es por parte de usuarios finales. Cualquier otro uso
+requiere licencia escrita.
+
+4. Sin licencias implícitas
+
+Nada en este documento otorga licencia, derecho o autorización a terceros sobre
+la propiedad intelectual de Cerrajería Merafex, S.L.
+
+5. Exclusión de garantías
+
+Este material se proporciona «tal cual», sin garantías de ningún tipo, expresas
+o implícitas.
+
+6. Limitación de responsabilidad
+
+En ningún caso Cerrajería Merafex, S.L. será responsable de daños derivados del
+uso no autorizado de este repositorio o de su contenido.
+
+7. Legislación aplicable
+
+Esta licencia se rige por la legislación española. Para cualquier controversia,
+las partes se someten a los Juzgados y Tribunales de Barcelona, España.
+
+8. Contacto
+
+Para solicitar permisos de uso, licencias o cualquier consulta:
+
+Cerrajería Merafex, S.L.
+Email: info@merafex.es
+Web: https://www.merafex.es
+
+================================================================================
+
+Plantilla basada en «All Rights Reserved License Template» de Wendt Piotr
+(@pietras333): https://gist.github.com/wendtpiotr/0aa46a39ddb01bb5ba90803eea4bfb28
