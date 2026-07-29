@@ -29,4 +29,4 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://www.merafex.es/sitemap.xml
+Sitemap: https://merafex.es/sitemap.xml

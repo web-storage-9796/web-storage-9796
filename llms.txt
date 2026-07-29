@@ -4,14 +4,14 @@
 
 ## Servicios Principales
 
-- [Apertura de Puertas](https://www.merafex.es/#servicios): Servicio de urgencias para apertura de puertas. Incluye aperturas judiciales para desahucios.
-- [Cambio de Cerraduras y Bombines](https://www.merafex.es/#servicios): Bombines anti-bumping, anti-ganzúa, anti-taladro. Alta seguridad con tarjeta de propiedad.
-- [Servicios Urgentes](https://www.merafex.es/#servicios): Disponibles para emergencias. Llegada en 20-30 minutos en Barcelona capital.
-- [Comunidades de Propietarios](https://www.merafex.es/#comunidades): Mantenimiento, igualación de bombines, muelles hidráulicos, abrepuertas eléctricos.
-- [Persianas](https://www.merafex.es/#servicios): Reparación, instalación y motorización (PVC, aluminio, acero).
-- [Instalación de Puertas](https://www.merafex.es/#servicios): Puertas blindadas, acorazadas y convencionales para viviendas, comunidades y locales.
-- [Rejas y Vallas](https://www.merafex.es/#servicios): Instalación de rejas y vallas de seguridad para ventanas, puertas y accesos.
-- [Pintura](https://www.merafex.es/#servicios): Pintura interior y exterior de viviendas, locales y comunidades.
+- [Apertura de Puertas](https://merafex.es/#servicios): Servicio de urgencias para apertura de puertas. Incluye aperturas judiciales para desahucios.
+- [Cambio de Cerraduras y Bombines](https://merafex.es/#servicios): Bombines anti-bumping, anti-ganzúa, anti-taladro. Alta seguridad con tarjeta de propiedad.
+- [Servicios Urgentes](https://merafex.es/#servicios): Disponibles para emergencias. Llegada en 20-30 minutos en Barcelona capital.
+- [Comunidades de Propietarios](https://merafex.es/#comunidades): Mantenimiento, igualación de bombines, muelles hidráulicos, abrepuertas eléctricos.
+- [Persianas](https://merafex.es/#servicios): Reparación, instalación y motorización (PVC, aluminio, acero).
+- [Instalación de Puertas](https://merafex.es/#servicios): Puertas blindadas, acorazadas y convencionales para viviendas, comunidades y locales.
+- [Rejas y Vallas](https://merafex.es/#servicios): Instalación de rejas y vallas de seguridad para ventanas, puertas y accesos.
+- [Pintura](https://merafex.es/#servicios): Pintura interior y exterior de viviendas, locales y comunidades.
 
 ## Zonas de Cobertura
 
@@ -35,6 +35,6 @@ Barcelona capital (todos los barrios) y área metropolitana: Badalona, Santa Col
 
 ## Optional
 
-- [Política de Privacidad](https://www.merafex.es/politica-privacidad.html)
-- [Aviso Legal](https://www.merafex.es/aviso-legal.html)
-- [Condiciones de Uso](https://www.merafex.es/condiciones-uso.html)
+- [Política de Privacidad](https://merafex.es/politica-privacidad.html)
+- [Aviso Legal](https://merafex.es/aviso-legal.html)
+- [Condiciones de Uso](https://merafex.es/condiciones-uso.html)
