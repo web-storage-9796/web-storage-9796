@@ -1,17 +1,19 @@
-# Merafex
+# Merafex | Cerrajería en Barcelona
 
-> Servicio de cerrajería profesional en Barcelona y área metropolitana. Apertura de puertas, cambio de cerraduras, bombines de alta seguridad, persianas, rejas y más. Técnicos especializados con hasta 25 años de experiencia. Llegada en 20-30 minutos en Barcelona capital.
+> Cerrajería profesional en Barcelona y área metropolitana: cambio de cerraduras, apertura de puertas urgente, instalación de escudos para cerraduras y bombines de alta seguridad. Presupuesto gratuito, técnicos especializados con hasta 25 años de experiencia y llegada habitual en 20-30 minutos en Barcelona capital.
 
 ## Servicios Principales
 
-- [Apertura de Puertas](https://merafex.es/#servicios): Servicio de urgencias para apertura de puertas. Incluye aperturas judiciales para desahucios.
-- [Cambio de Cerraduras y Bombines](https://merafex.es/#servicios): Bombines anti-bumping, anti-ganzúa, anti-taladro. Alta seguridad con tarjeta de propiedad.
-- [Servicios Urgentes](https://merafex.es/#servicios): Disponibles para emergencias. Llegada en 20-30 minutos en Barcelona capital.
-- [Comunidades de Propietarios](https://merafex.es/#comunidades): Mantenimiento, igualación de bombines, muelles hidráulicos, abrepuertas eléctricos.
-- [Persianas](https://merafex.es/#servicios): Reparación, instalación y motorización (PVC, aluminio, acero).
-- [Instalación de Puertas](https://merafex.es/#servicios): Puertas blindadas, acorazadas y convencionales para viviendas, comunidades y locales.
-- [Rejas y Vallas](https://merafex.es/#servicios): Instalación de rejas y vallas de seguridad para ventanas, puertas y accesos.
-- [Pintura](https://merafex.es/#servicios): Pintura interior y exterior de viviendas, locales y comunidades.
+- [Apertura de Puertas](https://merafex.es/apertura-puertas-barcelona/): Apertura de viviendas, locales y accesos comunitarios con valoración previa.
+- [Cambio de Cerraduras y Bombines](https://merafex.es/cambio-cerraduras-barcelona/): Sustitución de bombines y cerraduras según compatibilidad y estado de la puerta.
+- [Instalación de Escudos de Seguridad](https://merafex.es/instalacion-escudos-seguridad-barcelona/): Escudos antirrotura y magnéticos compatibles con el bombín y la puerta.
+- [Cerrajero Urgente](https://merafex.es/cerrajero-urgente-barcelona/): Atención de incidencias urgentes según disponibilidad, ubicación y tipo de cierre.
+- [Comunidades de Propietarios](https://merafex.es/cerrajeria-comunidades-barcelona/): Mantenimiento, amaestramiento, muelles y sistemas de acceso comunitarios.
+- [Reparación de Persianas](https://merafex.es/reparacion-persianas-barcelona/): Diagnóstico, reparación, instalación y motorización de persianas.
+- [Instalación de Puertas](https://merafex.es/instalacion-puertas-barcelona/): Puertas para viviendas, comunidades y locales, valoradas como un sistema completo.
+- [Rejas y Vallas](https://merafex.es/instalacion-rejas-vallas-barcelona/): Soluciones para huecos, accesos y perímetros según medidas y anclajes.
+- [Pintura](https://merafex.es/pintura-barcelona/): Pintura de viviendas, locales y comunidades con preparación previa de superficies.
+- [Prevención de Robos](https://merafex.es/prevencion-robos-barcelona/): Evaluación por capas de puertas, cerraduras, ventanas y accesos comunes.
 
 ## Zonas de Cobertura
 
@@ -27,6 +29,8 @@ Barcelona capital (todos los barrios) y área metropolitana: Badalona, Santa Col
 ## Preguntas Frecuentes
 
 - Tiempo de llegada en Barcelona capital: 20-30 minutos según tráfico y ubicación
+- Cambio de cerradura: recomendado tras una mudanza, pérdida de llaves, intento de robo o cuando el bombín está obsoleto
+- Instalación de escudos: protege el bombín contra la rotura, extracción y taladro; se valoran compatibilidad y estado de la puerta antes de instalarlo
 - Experiencia de los técnicos: hasta 25 años de experiencia en cerrajería
 - Garantía: hasta 2 años en instalaciones y cambios de cerradura según servicio y material
 - Métodos de pago: Visa, MasterCard, Bizum, transferencia bancaria o efectivo, al finalizar el servicio

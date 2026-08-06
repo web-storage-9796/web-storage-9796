@@ -1,9 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://merafex.es/</loc>
-    <lastmod>2026-03-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/" />
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/cambio-cerraduras-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/cambio-cerraduras-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/canvi-panys-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/lock-change-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/cambio-cerraduras-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/canvi-panys-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/cambio-cerraduras-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/canvi-panys-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/lock-change-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/cambio-cerraduras-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/lock-change-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/cambio-cerraduras-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/canvi-panys-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/lock-change-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/cambio-cerraduras-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/apertura-puertas-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/apertura-puertas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/obertura-portes-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/door-opening-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/apertura-puertas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/obertura-portes-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/apertura-puertas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/obertura-portes-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/door-opening-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/apertura-puertas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/door-opening-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/apertura-puertas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/obertura-portes-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/door-opening-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/apertura-puertas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/instalacion-escudos-seguridad-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/instalacion-escudos-seguridad-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/installacio-escuts-seguretat-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/security-shield-installation-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/instalacion-escudos-seguridad-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/installacio-escuts-seguretat-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/instalacion-escudos-seguridad-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/installacio-escuts-seguretat-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/security-shield-installation-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/instalacion-escudos-seguridad-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/security-shield-installation-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/instalacion-escudos-seguridad-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/installacio-escuts-seguretat-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/security-shield-installation-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/instalacion-escudos-seguridad-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/reparacion-persianas-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/reparacion-persianas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/reparacio-persianes-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/blind-repair-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/reparacion-persianas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/reparacio-persianes-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/reparacion-persianas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/reparacio-persianes-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/blind-repair-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/reparacion-persianas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/blind-repair-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/reparacion-persianas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/reparacio-persianes-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/blind-repair-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/reparacion-persianas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/cerrajeria-comunidades-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/cerrajeria-comunidades-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/serralleria-comunitats-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/community-locksmith-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/cerrajeria-comunidades-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/serralleria-comunitats-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/cerrajeria-comunidades-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/serralleria-comunitats-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/community-locksmith-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/cerrajeria-comunidades-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/community-locksmith-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/cerrajeria-comunidades-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/serralleria-comunitats-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/community-locksmith-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/cerrajeria-comunidades-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/instalacion-puertas-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/instalacion-puertas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/installacio-portes-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/door-installation-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/instalacion-puertas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/installacio-portes-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/instalacion-puertas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/installacio-portes-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/door-installation-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/instalacion-puertas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/door-installation-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/instalacion-puertas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/installacio-portes-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/door-installation-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/instalacion-puertas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/cerrajero-urgente-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/cerrajero-urgente-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/serraller-urgent-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/emergency-locksmith-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/cerrajero-urgente-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/serraller-urgent-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/cerrajero-urgente-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/serraller-urgent-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/emergency-locksmith-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/cerrajero-urgente-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/emergency-locksmith-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/cerrajero-urgente-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/serraller-urgent-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/emergency-locksmith-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/cerrajero-urgente-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/pintura-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/pintura-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/pintura-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/painting-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/pintura-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/pintura-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/pintura-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/pintura-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/painting-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/pintura-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/painting-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/pintura-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/pintura-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/painting-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/pintura-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/instalacion-rejas-vallas-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/instalacion-rejas-vallas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/installacio-reixes-tanques-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/security-bars-fences-installation-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/instalacion-rejas-vallas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/installacio-reixes-tanques-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/instalacion-rejas-vallas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/installacio-reixes-tanques-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/security-bars-fences-installation-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/instalacion-rejas-vallas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/security-bars-fences-installation-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/instalacion-rejas-vallas-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/installacio-reixes-tanques-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/security-bars-fences-installation-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/instalacion-rejas-vallas-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/prevencion-robos-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/prevencion-robos-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/prevencio-robatoris-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/burglary-prevention-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/prevencion-robos-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/ca/prevencio-robatoris-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/prevencion-robos-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/prevencio-robatoris-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/burglary-prevention-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/prevencion-robos-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://merafex.es/en/burglary-prevention-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://merafex.es/prevencion-robos-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://merafex.es/ca/prevencio-robatoris-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://merafex.es/en/burglary-prevention-barcelona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://merafex.es/prevencion-robos-barcelona/" />
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

@@ -1,0 +1,106 @@
+.footer {
+  background: #0f172a;
+  color: #fff;
+  overflow: hidden;
+  padding: 4rem 0 2rem;
+  position: relative;
+}
+
+.footer::before {
+  background: linear-gradient(90deg, #1e3a8a, #fbbf24, #1e3a8a);
+  content: "";
+  height: 3px;
+  inset: 0 0 auto;
+  position: absolute;
+}
+
+.footer-content {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer-title,
+.footer-subtitle {
+  border-bottom: 2px solid #fbbf24;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title { font-size: 1.25rem; }
+.footer-subtitle { font-size: 1rem; }
+
+.footer-description,
+.footer-list li,
+.footer-list a,
+.footer-bottom {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-description { font-size: 0.93rem; line-height: 1.7; margin: 0 0 1.5rem; }
+
+.footer-social,
+.payment-icons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social { gap: 1rem; }
+
+.social-link {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  height: 38px;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 300ms ease;
+  width: 38px;
+}
+
+.social-link:hover { background: #fbbf24; border-color: #fbbf24; color: #111827; transform: translateY(-3px); }
+
+.footer-payment-methods { margin: 1.5rem 0; }
+.footer-payment-methods p { color: rgba(255, 255, 255, 0.9); margin: 0 0 0.5rem; }
+.payment-icons { font-size: 2rem; gap: 1.5rem; }
+.payment-method-image { display: block; height: auto; max-width: 100%; }
+.payment-method-image-cards { width: 138px; }
+.payment-method-image-bizum { width: 96px; }
+.payment-icons i,
+.footer-list li i { color: #fbbf24; }
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-list li { align-items: center; display: flex; font-size: 0.93rem; gap: 0.5rem; }
+.footer-list li i { font-size: 0.85rem; width: 18px; }
+.footer-list a { text-decoration: none; transition: color 300ms ease; }
+.footer-list a:hover { color: #fbbf24; }
+.footer-bottom { font-size: 0.875rem; padding-top: 2rem; text-align: center; }
+.footer-bottom p { margin: 0 0 1rem; }
+
+@media (max-width: 768px) {
+  .footer-content { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+  .payment-method-image-cards { width: 120px; }
+  .payment-method-image-bizum { width: 84px; }
+}

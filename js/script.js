@@ -1,1 +1,1243 @@
-function hideFeaturableBranding(e){if(!e||e.querySelector("[data-hide-featurable-branding]"))return;const t=document.createElement("style");t.dataset.hideFeaturableBranding="true",t.textContent=['[class*="Carousel-module__branding"]','[class*="Branding-module__"]','[class*="brandingContainer"]','a[href*="featurable.com"]'].map(function(e){return e+"{display:none!important;visibility:hidden!important;height:0!important;margin:0!important;padding:0!important;overflow:hidden!important;}"}).join(""),e.appendChild(t)}function observeFeaturableBranding(){const e=document.querySelector(".google-reviews-board");if(!e)return;function t(){e.querySelectorAll(".shadow-wrapper").forEach(function(e){e.shadowRoot&&hideFeaturableBranding(e.shadowRoot)})}t();new MutationObserver(t).observe(e,{childList:!0,subtree:!0})}function initFeaturableReviews(){const e=document.getElementById("opiniones");if(!e||!e.querySelector("[data-featurable-async]"))return;function t(){if(document.querySelector("script[data-featurable-bundle]"))return;if(!document.querySelector("link[data-featurable-preconnect]")){const e=document.createElement("link");e.rel="preconnect",e.href="https://featurable.com",e.crossOrigin="anonymous",e.dataset.featurablePreconnect="true",document.head.appendChild(e)}const e=document.createElement("script");e.src="https://featurable.com/assets/bundle.js",e.defer=!0,e.charset="UTF-8",e.dataset.featurableBundle="true",document.body.appendChild(e)}if(observeFeaturableBranding(),!("IntersectionObserver"in window))return void t();const n=new IntersectionObserver(function(e){e.some(function(e){return e.isIntersecting})&&(t(),n.disconnect())},{rootMargin:"240px 0px",threshold:0});n.observe(e)}function adaptMapZoom(){const e=document.getElementById("map-iframe"),t=window.innerWidth<768?10:11;e.src="https://www.google.com/maps/d/u/3/embed?mid=13kZYriuUxUpsJt3kzK1FVElKeX04L9U&ehbc=2E312F&noprof=1&z="+t}function initMobileMenu(){const e=document.querySelector(".mobile-menu-btn"),t=document.querySelector(".nav-menu"),n=document.querySelectorAll(".nav-menu a");e&&t&&(e.addEventListener("click",function(){this.classList.toggle("active"),t.classList.toggle("active"),t.classList.contains("active")?document.body.style.overflow="hidden":document.body.style.overflow=""}),n.forEach(n=>{n.addEventListener("click",function(){e.classList.remove("active"),t.classList.remove("active"),document.body.style.overflow=""})}),document.addEventListener("click",function(n){t.contains(n.target)||e.contains(n.target)||(e.classList.remove("active"),t.classList.remove("active"),document.body.style.overflow="")}))}function initFAQ(){document.body.classList.add("js-faq-ready");const e=document.querySelectorAll(".faq-item");e.forEach(t=>{const n=t.querySelector(".faq-question");n&&n.addEventListener("click",function(){const o=t.classList.contains("active");e.forEach(e=>{if(e!==t){e.classList.remove("active");const t=e.querySelector(".faq-question");t&&t.setAttribute("aria-expanded","false")}}),o?(t.classList.remove("active"),n.setAttribute("aria-expanded","false")):(t.classList.add("active"),n.setAttribute("aria-expanded","true"))})})}document.addEventListener("DOMContentLoaded",function(){initMobileMenu(),initLangSwitcher(),initBrowserLanguageSuggestion(),initContactForm(),initPhoneFieldEnhancements(),initScrollToTop(),initSmoothScroll(),initCookieBanner(),initReopenCookieBanner();(window.requestIdleCallback?e=>requestIdleCallback(e,{timeout:2e3}):e=>setTimeout(e,200))(function(){initFAQ(),adaptMapZoom(),initFeaturableReviews()})});const EMAIL_DNS_RESOLVER_ENDPOINTS=["https://dns.google/resolve","https://cloudflare-dns.com/dns-query"],EMAIL_DNS_LOOKUP_TIMEOUT_MS=4500;function initContactForm(){const e=document.getElementById("contact-form");e&&e.addEventListener("submit",async function(t){t.preventDefault();const n={name:document.getElementById("name").value.trim(),phone:document.getElementById("phone").value.trim(),email:document.getElementById("email").value.trim(),postalcode:document.getElementById("postalcode").value.trim(),company:document.getElementById("company")?.value.trim()||"",message:document.getElementById("message").value.trim(),privacy:document.getElementById("privacy")?.checked||!1,turnstileToken:getTurnstileToken(e)};if(n.company)return showFormMessage("¡Mensaje enviado correctamente! Nos pondremos en contacto contigo lo antes posible.","success"),void e.reset();const o=await validateForm(n);if(!o.isValid)return void showFormMessage(o.message,"error");if(o.formattedPhone){const e=document.getElementById("phone");e&&(e.value=o.formattedPhone)}if(o.normalizedPhone&&(n.phone=o.normalizedPhone),o.normalizedEmail){n.email=o.normalizedEmail;const e=document.getElementById("email");e&&(e.value=o.normalizedEmail)}const i=e.getAttribute("action");i?n.turnstileToken?await submitForm(n,i):showFormMessage("Completa la verificación anti-spam antes de enviar el formulario.","error"):showFormMessage("No se pudo enviar el mensaje. Falta configurar el endpoint del formulario.","error")})}function getTurnstileToken(e){if(!e)return"";const t=e.querySelector('input[name="cf-turnstile-response"]');return t?t.value.trim():""}function resetTurnstileWidget(e){const t=Boolean(window.turnstile&&"function"==typeof window.turnstile.reset);if(!e||!t)return;const n=e.querySelector(".cf-turnstile");if(!n)return;const o=n.getAttribute("data-widget-id");o?window.turnstile.reset(o):window.turnstile.reset()}async function validateForm(e){if(!(e.name&&e.phone&&e.email&&e.message))return{isValid:!1,message:"Nombre, teléfono, email y mensaje son obligatorios."};const t=await validateEmailAddress(e.email);if(!t.isValid)return{isValid:!1,message:t.message};const n=validatePhoneNumber(e.phone);if(!n.isValid)return{isValid:!1,message:n.message};if(e.postalcode){if(!/^\d{5}$/.test(e.postalcode))return{isValid:!1,message:"El código postal debe tener exactamente 5 dígitos."}}return e.privacy?{isValid:!0,message:"",normalizedEmail:t.normalizedEmail,normalizedPhone:n.normalizedPhone,formattedPhone:n.formattedPhone}:{isValid:!1,message:"Debes aceptar la política de privacidad para continuar."}}async function validateEmailAddress(e){const t=(e||"").trim();if(!t)return{isValid:!1,message:"El email es obligatorio."};const n=t.lastIndexOf("@");if(!(n>0&&n<t.length-1))return{isValid:!1,message:"El email no parece válido. Revisa el formato (ejemplo: nombre@dominio.com)."};const o=t.slice(0,n),i=t.slice(n+1).toLowerCase(),a=o+"@"+i;if(Boolean(window.validator&&"function"==typeof window.validator.isEmail)){if(!window.validator.isEmail(a,{allow_utf8_local_part:!1,require_tld:!0,ignore_max_length:!1,domain_specific_validation:!0}))return{isValid:!1,message:"El email no parece válido. Revisa el formato (ejemplo: nombre@dominio.com)."}}else{if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(a))return{isValid:!1,message:"El email no parece válido. Revisa el formato (ejemplo: nombre@dominio.com)."}}const r=await checkEmailDomainExists(i);return r.lookupFailed?{isValid:!1,message:'No se pudo verificar el dominio "'+i+'" del email. Revisa tu conexión e inténtalo de nuevo.'}:r.exists?{isValid:!0,message:"",normalizedEmail:a}:{isValid:!1,message:'El dominio "'+i+'" del email es inválido.'}}async function checkEmailDomainExists(e){const t=await resolveDnsRecord(e,"MX");if(!0===t)return{exists:!0,lookupFailed:!1};const[n,o]=await Promise.all([resolveDnsRecord(e,"A"),resolveDnsRecord(e,"AAAA")]);if(!0===n||!0===o)return{exists:!0,lookupFailed:!1};return{exists:!1,lookupFailed:[t,n,o].every(function(e){return null===e})}}async function resolveDnsRecord(e,t){let n=!1;for(let o=0;o<EMAIL_DNS_RESOLVER_ENDPOINTS.length;o+=1){const i=EMAIL_DNS_RESOLVER_ENDPOINTS[o]+"?name="+encodeURIComponent(e)+"&type="+encodeURIComponent(t);try{const e=await fetchWithTimeout(i,{headers:{Accept:"application/dns-json"}},4500);if(!e||!e.ok)continue;const t=await e.json();if(n=!0,t&&3===t.Status)return!1;const o=t&&Array.isArray(t.Answer)?t.Answer:[];if(o.some(function(e){return e&&"string"==typeof e.data&&e.data.trim().length>0}))return!0;if(t&&0===t.Status)return!1}catch(e){}}return!n&&null}function fetchWithTimeout(e,t,n){return Promise.race([fetch(e,t),new Promise(function(e,t){setTimeout(function(){t(new Error("Email DNS lookup timed out"))},n)})])}function validatePhoneNumber(e){const t=(e||"").trim();if(!t)return{isValid:!1,message:"El teléfono es obligatorio."};if(/[^0-9\s\+\-\(\)\.]/.test(t))return{isValid:!1,message:"El teléfono contiene caracteres no válidos."};if(Boolean(window.libphonenumber&&"function"==typeof window.libphonenumber.parsePhoneNumberFromString))try{const e=window.libphonenumber.parsePhoneNumberFromString(t,"ES");return e&&e.isPossible()&&e.isValid()?{isValid:!0,message:"",normalizedPhone:e.number,formattedPhone:e.formatInternational()}:{isValid:!1,message:"El teléfono no es válido. Ejemplo: +34 612 34 56 78."}}catch(e){return{isValid:!1,message:"No hemos podido validar el teléfono. Revisa el formato."}}const n=t.replace(/\D/g,"");return n.length<9?{isValid:!1,message:"El teléfono debe tener al menos 9 dígitos."}:n.length>15?{isValid:!1,message:"El teléfono es demasiado largo. Revisa el número."}:{isValid:!0,message:"",normalizedPhone:t,formattedPhone:t}}function initPhoneFieldEnhancements(){const e=document.getElementById("phone");e&&(e.setAttribute("inputmode","tel"),e.setAttribute("autocomplete","tel"),e.addEventListener("blur",function(){const t=e.value.trim();if(!t)return;const n=validatePhoneNumber(t);n.isValid&&n.formattedPhone&&(e.value=n.formattedPhone)}))}async function submitForm(e,t){const n=document.getElementById("contact-form"),o=n.querySelector(".btn-submit"),i=o.textContent.trim()||"Enviar Mensaje";o.disabled=!0,o.textContent="Enviando...",o.setAttribute("aria-busy","true");try{const o={Nombre:e.name,"Teléfono":e.phone,Email:e.email,"Código Postal":e.postalcode||"No indicado",Mensaje:e.message},i=await fetch(t,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(o)});let a=null;try{a=await i.json()}catch(e){a=null}const r=Boolean(a&&(!1===a.success||"false"===a.success||!1===a.ok));if(!i.ok||r)throw new Error("Form provider rejected submission");showFormMessage("¡Formulario enviado correctamente! En breve nos pondremos en contacto contigo.","success"),n.reset(),resetTurnstileWidget(n),trackEvent("Contact","Form Submit","Success")}catch(e){console.error("Contact form submission error:",e),showFormMessage("No hemos podido enviar tu mensaje. Intenta de nuevo en unos minutos.","error"),trackEvent("Contact","Form Submit","Error")}finally{o.disabled=!1,o.textContent=i,o.removeAttribute("aria-busy");const e=document.getElementById("form-message");e&&e.scrollIntoView({behavior:"smooth",block:"nearest"})}}let timeoutId=null;function showFormMessage(e,t){const n=document.getElementById("form-message");n&&(n.textContent=e,n.className="form-message "+t,n.style.display="block",n.scrollIntoView({behavior:"smooth",block:"center"}),timeoutId&&clearTimeout(timeoutId),timeoutId=setTimeout(()=>{n.style.display="none"},1e4))}function initScrollToTop(){const e=document.getElementById("scroll-top"),t=document.querySelector(".logo");function n(){window.scrollTo({top:0,behavior:"smooth"})}function o(){updateScrollTopOffset(),function(){if(!e)return;const t=window.scrollY>300;e.classList.toggle("visible",t);const n=document.querySelector(".mobile-cta-widget");n&&n.classList.toggle("visible",t)}()}(e||t)&&(e&&window.addEventListener("scroll",o,{passive:!0}),e&&e.addEventListener("click",function(){n()}),t&&t.addEventListener("click",function(e){e.preventDefault(),n()}),window.addEventListener("resize",debounce(o,100)),window.addEventListener("load",o,{once:!0}),o(),setTimeout(o,650),requestAnimationFrame(function(){o()}))}function initSmoothScroll(){document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){const t=this.getAttribute("href");if("#"===t)return;const n=document.querySelector(t);if(n){e.preventDefault();const t=document.querySelector(".header"),o=t?t.offsetHeight:0,i=n.getBoundingClientRect().top+window.pageYOffset-o-20;window.scrollTo({top:i,behavior:"smooth"})}})})}const COOKIE_CONSENT_KEY="cookieConsentChoice",MOBILE_BREAKPOINT_QUERY="(max-width: 900px)";function initCookieBanner(){const e=document.getElementById("cookieBanner");if(!e)return;const t=document.getElementById("cookieAcceptBtn"),n=document.getElementById("cookieRejectBtn"),o=safeGetLocalStorage(COOKIE_CONSENT_KEY);if(t&&t.addEventListener("click",function(){handleCookieChoice("accepted",e)}),n&&n.addEventListener("click",function(){handleCookieChoice("rejected",e)}),window.addEventListener("resize",debounce(function(){updateCookieBannerOffset(e)},100)),"accepted"===o||"rejected"===o)return setCookieBannerVisibility(e,!1),void("accepted"===o&&initAnalyticsTracking());setCookieBannerVisibility(e,!0)}function initReopenCookieBanner(){const e=document.getElementById("reopenCookieBanner");if(!e)return;const t=document.getElementById("cookieBanner");t&&e.addEventListener("click",function(e){e.preventDefault(),safeRemoveLocalStorage(COOKIE_CONSENT_KEY),setCookieBannerVisibility(t,!0)})}function handleCookieChoice(e,t){safeSetLocalStorage(COOKIE_CONSENT_KEY,e),setCookieBannerVisibility(t,!1),"accepted"===e&&initAnalyticsTracking(),trackEvent("Cookies","Consent",e)}function setCookieBannerVisibility(e,t){if(e){if(e.hidden=!t,!t)return document.body.classList.remove("cookie-banner-visible"),document.documentElement.style.setProperty("--cookie-banner-offset","0px"),void setTimeout(updateScrollTopOffset,500);requestAnimationFrame(function(){updateCookieBannerOffset(e)})}}function updateCookieBannerOffset(e){const t=window.matchMedia(MOBILE_BREAKPOINT_QUERY).matches,n=isFloatingElementVisible(e),o=n?e.getBoundingClientRect():null,i=t?window.innerHeight:0,a=t?10:12,r=o?Math.ceil(o.height+a):0;let s=0;t&&o&&(s=Math.max(0,Math.ceil(i-o.top)+10)),n?(document.body.classList.add("cookie-banner-visible"),document.documentElement.style.setProperty("--cookie-banner-offset",r+"px")):(document.body.classList.remove("cookie-banner-visible"),document.documentElement.style.setProperty("--cookie-banner-offset","0px")),document.documentElement.style.setProperty("--scroll-top-offset",t?s+"px":"0px")}function updateScrollTopOffset(){if(!window.matchMedia(MOBILE_BREAKPOINT_QUERY).matches)return void document.documentElement.style.setProperty("--scroll-top-offset","0px");const e=[document.getElementById("cookieBanner")],t=window.innerHeight,n=e.map(e=>({el:e,rect:isFloatingElementVisible(e)?e.getBoundingClientRect():null}));let o=0;n.forEach(({rect:e})=>{if(!e)return;const n=Math.ceil(t-e.top);n>o&&(o=n)});const i=o>0?10:0,a=Math.max(0,o+i);document.documentElement.style.setProperty("--scroll-top-offset",a+"px")}function isFloatingElementVisible(e){if(!e||e.hidden)return!1;const t=window.getComputedStyle(e);if("none"===t.display||"hidden"===t.visibility)return!1;const n=e.getBoundingClientRect();return n.width>0&&n.height>0}function safeGetLocalStorage(e){try{return window.localStorage.getItem(e)}catch(e){return null}}function safeSetLocalStorage(e,t){try{window.localStorage.setItem(e,t)}catch(e){}}function safeRemoveLocalStorage(e){try{window.localStorage.removeItem(e)}catch(e){}}function formatPhoneNumber(e){const t=document.getElementById("phone");t&&t.addEventListener("input",function(e){let t=e.target.value.replace(/\D/g,"");t.length>0&&(t.startsWith("34")?t="+"+t:t.startsWith("+")||(t="+34"+t)),e.target.value=t})}function debounce(e,t){let n;return function(...o){clearTimeout(n),n=setTimeout(()=>{clearTimeout(n),e(...o)},t)}}window.addEventListener("scroll",debounce(function(){const e=document.querySelector(".header");e&&(window.pageYOffset>100?e.style.boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1)":e.style.boxShadow="0 1px 2px 0 rgba(0, 0, 0, 0.05)")},50));const GTM_ID="GTM-MJ6NWRV4";function initAnalyticsTracking(){loadGoogleTagManager(),document.querySelectorAll('a[href^="tel:"]').forEach(e=>{e.addEventListener("click",function(){trackEvent("Contact","Phone Click",this.getAttribute("href"))})}),document.querySelectorAll('a[href*="wa.me"]').forEach(e=>{e.addEventListener("click",function(){trackEvent("Contact","WhatsApp Click",this.getAttribute("href"))})}),document.querySelectorAll('a[href^="mailto:"]').forEach(e=>{e.addEventListener("click",function(){trackEvent("Contact","Email Click",this.getAttribute("href"))})}),document.querySelectorAll(".btn-primary, .btn-secondary").forEach(e=>{e.addEventListener("click",function(){trackEvent("CTA","Click",this.textContent.trim())})})}function loadGoogleTagManager(){if(window._gtmLoaded||document.getElementById("gtm-script"))return;window._gtmLoaded=!0;const e=function(){window.dataLayer=window.dataLayer||[],window.dataLayer.push({"gtm.start":(new Date).getTime(),event:"gtm.js"});const e=document.createElement("script");e.id="gtm-script",e.async=!0,e.src="https://www.googletagmanager.com/gtm.js?id="+GTM_ID,document.head.appendChild(e)};"requestIdleCallback"in window?requestIdleCallback(e,{timeout:2e3}):setTimeout(e,1)}function trackEvent(e,t,n){"accepted"===safeGetLocalStorage(COOKIE_CONSENT_KEY)&&(window.dataLayer=window.dataLayer||[],window.dataLayer.push({event:"track_event",event_category:e,event_action:t,event_label:n}))}function initLangSwitcher(){const e=document.querySelector(".lang-switcher");if(!e)return;const t=e.querySelector(".lang-current");t.addEventListener("click",function(n){n.stopPropagation();const o=e.classList.toggle("open");t.setAttribute("aria-expanded",o)}),document.addEventListener("click",function(n){e.contains(n.target)||(e.classList.remove("open"),t.setAttribute("aria-expanded","false"))}),document.addEventListener("keydown",function(n){"Escape"===n.key&&(e.classList.remove("open"),t.setAttribute("aria-expanded","false"))})}function initBrowserLanguageSuggestion(){const e=document.documentElement.lang.toLowerCase().split("-")[0],t=(navigator.languages&&navigator.languages[0]||navigator.language||"en").toLowerCase().split("-")[0],n=["es","ca","en"].includes(t)?t:"en";if(e===n)return;const o={es:{languageLabel:"Idioma detectado",title:"¿Quieres ver la web en español?",description:"Tu navegador está configurado en español.",confirm:"Sí, ver en español",cancel:"No, continuar aquí",flag:'<svg viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg>'},ca:{languageLabel:"Idioma detectat",title:"Vols veure el web en català?",description:"El teu navegador està configurat en català.",confirm:"Sí, veure-la en català",cancel:"No, continuar aquí",flag:'<svg viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#fcdd09"/><rect y="0.222" width="3" height="0.222" fill="#da121a"/><rect y="0.667" width="3" height="0.222" fill="#da121a"/><rect y="1.111" width="3" height="0.222" fill="#da121a"/><rect y="1.556" width="3" height="0.222" fill="#da121a"/></svg>'},en:{languageLabel:"Detected language",title:"Would you like to view the website in English?",description:"Your browser is set to English.",confirm:"Yes, view in English",cancel:"No, stay here",flag:'<svg viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#012169"/><path d="M0,0 L3,2 M3,0 L0,2" stroke="#fff" stroke-width="0.4"/><path d="M0,0 L3,2 M3,0 L0,2" stroke="#C8102E" stroke-width="0.25"/><path d="M1.5,0 V2 M0,1 H3" stroke="#fff" stroke-width="0.6"/><path d="M1.5,0 V2 M0,1 H3" stroke="#C8102E" stroke-width="0.4"/></svg>'}}[n],i={es:"/",ca:"/ca/",en:"/en/"},a=document.createElement("div"),r="browser-language-title";function s(){a.remove(),document.removeEventListener("keydown",c)}function c(e){"Escape"===e.key&&s()}a.className="browser-language-modal",a.innerHTML=`\n        <div class="browser-language-modal__backdrop"></div>\n        <section class="browser-language-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="${r}">\n            <header class="browser-language-modal__header">\n                <div class="browser-language-modal__flag">${o.flag}</div>\n                <div>\n                    <span class="browser-language-modal__eyebrow">${o.languageLabel}</span>\n                    <h2 id="${r}">${o.title}</h2>\n                </div>\n            </header>\n            <p>${o.description}</p>\n            <div class="browser-language-modal__actions">\n                <button type="button" class="browser-language-modal__confirm">${o.confirm}</button>\n                <button type="button" class="browser-language-modal__cancel">${o.cancel}</button>\n            </div>\n        </section>\n    `,a.querySelector(".browser-language-modal__confirm").addEventListener("click",function(){window.location.href=i[n]}),a.querySelector(".browser-language-modal__cancel").addEventListener("click",s),a.querySelector(".browser-language-modal__backdrop").addEventListener("click",s),document.body.appendChild(a),document.addEventListener("keydown",c),a.querySelector(".browser-language-modal__confirm").focus({preventScroll:!0})}
+// ======================================
+// DOM Content Loaded
+// ======================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize i18n system first
+    // await i18n.init();
+
+    // Initialize above-fold / interaction-critical features immediately
+    initMobileMenu();
+    initLangSwitcher();
+    initBrowserLanguageSuggestion();
+    initContactForm();
+    initPhoneFieldEnhancements();
+    initScrollToTop();
+    initSmoothScroll();
+    initCookieBanner();
+    initReopenCookieBanner();
+
+    // Defer below-fold work so it doesn't block LCP paint
+    const defer = window.requestIdleCallback
+        ? cb => requestIdleCallback(cb, { timeout: 2000 })
+        : cb => setTimeout(cb, 200);
+
+    defer(function() {
+        initFAQ();
+        adaptMapZoom();
+        initFeaturableReviews();
+    });
+});
+
+
+
+// ======================================
+// Featurable reviews (lazy — below the fold)
+// ======================================
+
+function hideFeaturableBranding(shadowRoot) {
+    if (!shadowRoot || shadowRoot.querySelector('[data-hide-featurable-branding]')) return;
+
+    const style = document.createElement('style');
+    style.dataset.hideFeaturableBranding = 'true';
+    style.textContent = [
+        '[class*="Carousel-module__branding"]',
+        '[class*="Branding-module__"]',
+        '[class*="brandingContainer"]',
+        'a[href*="featurable.com"]',
+    ]
+        .map(function(selector) {
+            return selector + '{display:none!important;visibility:hidden!important;height:0!important;margin:0!important;padding:0!important;overflow:hidden!important;}';
+        })
+        .join('');
+
+    shadowRoot.appendChild(style);
+}
+
+function observeFeaturableBranding() {
+    const board = document.querySelector('.google-reviews-board');
+    if (!board) return;
+
+    function scanShadowRoots() {
+        board.querySelectorAll('.shadow-wrapper').forEach(function(wrapper) {
+            if (wrapper.shadowRoot) hideFeaturableBranding(wrapper.shadowRoot);
+        });
+    }
+
+    scanShadowRoots();
+
+    const observer = new MutationObserver(scanShadowRoots);
+    observer.observe(board, { childList: true, subtree: true });
+}
+
+function initFeaturableReviews() {
+    const section = document.getElementById('opiniones');
+    if (!section || !section.querySelector('[data-featurable-async]')) return;
+
+    observeFeaturableBranding();
+
+    function loadBundle() {
+        if (document.querySelector('script[data-featurable-bundle]')) return;
+
+        if (!document.querySelector('link[data-featurable-preconnect]')) {
+            const link = document.createElement('link');
+            link.rel = 'preconnect';
+            link.href = 'https://featurable.com';
+            link.crossOrigin = 'anonymous';
+            link.dataset.featurablePreconnect = 'true';
+            document.head.appendChild(link);
+        }
+
+        const script = document.createElement('script');
+        script.src = 'https://featurable.com/assets/bundle.js';
+        script.defer = true;
+        script.charset = 'UTF-8';
+        script.dataset.featurableBundle = 'true';
+        document.body.appendChild(script);
+    }
+
+    if (!('IntersectionObserver' in window)) {
+        loadBundle();
+        return;
+    }
+
+    const observer = new IntersectionObserver(function(entries) {
+        if (!entries.some(function(entry) { return entry.isIntersecting; })) return;
+        loadBundle();
+        observer.disconnect();
+    }, { rootMargin: '240px 0px', threshold: 0 });
+
+    observer.observe(section);
+}
+
+// ======================================
+// Adapt Map Zoom on Mobile
+// ======================================
+
+function adaptMapZoom() {
+    const iframe = document.getElementById('map-iframe');
+    const base = 'https://www.google.com/maps/d/u/3/embed?mid=13kZYriuUxUpsJt3kzK1FVElKeX04L9U&ehbc=2E312F&noprof=1';
+    const zoom = window.innerWidth < 768 ? 10 : 11; // lower zoom on mobile
+    iframe.src = base + '&z=' + zoom;
+}
+
+// ======================================
+// Mobile Menu Toggle
+// ======================================
+
+function initMobileMenu() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    if (!mobileMenuBtn || !navMenu) return;
+    
+    // Toggle menu on button click
+    mobileMenuBtn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close menu when clicking on a nav link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            mobileMenuBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// ======================================
+// FAQ Accordion
+// ======================================
+
+function initFAQ() {
+    document.body.classList.add('js-faq-ready');
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        if (!question) return;
+        
+        question.addEventListener('click', function() {
+            // Close other open items
+            const wasActive = item.classList.contains('active');
+            
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    if (otherQuestion) {
+                        otherQuestion.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+            
+            // Toggle current item
+            if (wasActive) {
+                item.classList.remove('active');
+                question.setAttribute('aria-expanded', 'false');
+            } else {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+}
+
+// ======================================
+// Contact Form Handler
+// ======================================
+
+const EMAIL_DNS_RESOLVER_ENDPOINTS = [
+    'https://dns.google/resolve',
+    'https://cloudflare-dns.com/dns-query'
+];
+const EMAIL_DNS_LOOKUP_TIMEOUT_MS = 4500;
+
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    
+    if (!form) return;
+    
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+            name: document.getElementById('name').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            postalcode: document.getElementById('postalcode').value.trim(),
+            company: document.getElementById('company')?.value.trim() || '',
+            message: document.getElementById('message').value.trim(),
+            privacy: document.getElementById('privacy')?.checked || false,
+            turnstileToken: getTurnstileToken(form)
+        };
+
+        // Honeypot anti-spam trap
+        if (formData.company) {
+            showFormMessage(
+                '¡Mensaje enviado correctamente! Nos pondremos en contacto contigo lo antes posible.',
+                'success'
+            );
+            form.reset();
+            return;
+        }
+        
+        // Validate form
+        const validation = await validateForm(formData);
+        if (!validation.isValid) {
+            showFormMessage(validation.message, 'error');
+            return;
+        }
+
+        if (validation.formattedPhone) {
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput) {
+                phoneInput.value = validation.formattedPhone;
+            }
+        }
+
+        if (validation.normalizedPhone) {
+            formData.phone = validation.normalizedPhone;
+        }
+
+        if (validation.normalizedEmail) {
+            formData.email = validation.normalizedEmail;
+
+            const emailInput = document.getElementById('email');
+            if (emailInput) {
+                emailInput.value = validation.normalizedEmail;
+            }
+        }
+
+        const endpoint = form.getAttribute('action');
+        if (!endpoint) {
+            showFormMessage('No se pudo enviar el mensaje. Falta configurar el endpoint del formulario.', 'error');
+            return;
+        }
+
+        if (!formData.turnstileToken) {
+            showFormMessage('Completa la verificación anti-spam antes de enviar el formulario.', 'error');
+            return;
+        }
+        
+        await submitForm(formData, endpoint);
+    });
+}
+
+function getTurnstileToken(form) {
+    if (!form) return '';
+
+    const turnstileField = form.querySelector('input[name="cf-turnstile-response"]');
+    if (!turnstileField) return '';
+
+    return turnstileField.value.trim();
+}
+
+function resetTurnstileWidget(form) {
+    const hasTurnstileApi = Boolean(window.turnstile && typeof window.turnstile.reset === 'function');
+    if (!form || !hasTurnstileApi) return;
+
+    const turnstileContainer = form.querySelector('.cf-turnstile');
+    if (!turnstileContainer) return;
+
+    const widgetId = turnstileContainer.getAttribute('data-widget-id');
+    if (widgetId) {
+        window.turnstile.reset(widgetId);
+        return;
+    }
+
+    window.turnstile.reset();
+}
+
+async function validateForm(data) {
+    // Check if all required fields are filled
+    if (!data.name || !data.phone || !data.email || !data.message) {
+        return {
+            isValid: false,
+            message: 'Nombre, teléfono, email y mensaje son obligatorios.'
+        };
+    }
+
+    const emailValidation = await validateEmailAddress(data.email);
+    if (!emailValidation.isValid) {
+        return {
+            isValid: false,
+            message: emailValidation.message
+        };
+    }
+    
+    const phoneValidation = validatePhoneNumber(data.phone);
+    if (!phoneValidation.isValid) {
+        return {
+            isValid: false,
+            message: phoneValidation.message
+        };
+    }
+
+    // Optional postal code validation (Spain)
+    if (data.postalcode) {
+        const postalRegex = /^\d{5}$/;
+        if (!postalRegex.test(data.postalcode)) {
+            return {
+                isValid: false,
+                message: 'El código postal debe tener exactamente 5 dígitos.'
+            };
+        }
+    }
+    
+    // Check privacy policy acceptance
+    if (!data.privacy) {
+        return {
+            isValid: false,
+            message: 'Debes aceptar la política de privacidad para continuar.'
+        };
+    }
+    
+    return {
+        isValid: true,
+        message: '',
+        normalizedEmail: emailValidation.normalizedEmail,
+        normalizedPhone: phoneValidation.normalizedPhone,
+        formattedPhone: phoneValidation.formattedPhone
+    };
+}
+
+async function validateEmailAddress(emailValue) {
+    const rawEmail = (emailValue || '').trim();
+    if (!rawEmail) {
+        return {
+            isValid: false,
+            message: 'El email es obligatorio.'
+        };
+    }
+
+    const atSymbolIndex = rawEmail.lastIndexOf('@');
+    const hasAtSymbol = atSymbolIndex > 0 && atSymbolIndex < rawEmail.length - 1;
+    if (!hasAtSymbol) {
+        return {
+            isValid: false,
+            message: 'El email no parece válido. Revisa el formato (ejemplo: nombre@dominio.com).'
+        };
+    }
+
+    const localPart = rawEmail.slice(0, atSymbolIndex);
+    const domainPart = rawEmail.slice(atSymbolIndex + 1).toLowerCase();
+    const normalizedEmail = localPart + '@' + domainPart;
+
+    const hasValidatorLibrary = Boolean(window.validator && typeof window.validator.isEmail === 'function');
+
+    if (hasValidatorLibrary) {
+        const isValidEmail = window.validator.isEmail(normalizedEmail, {
+            allow_utf8_local_part: false,
+            require_tld: true,
+            ignore_max_length: false,
+            domain_specific_validation: true
+        });
+
+        if (!isValidEmail) {
+            return {
+                isValid: false,
+                message: 'El email no parece válido. Revisa el formato (ejemplo: nombre@dominio.com).'
+            };
+        }
+    } else {
+        // Fallback if the validator library fails to load.
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(normalizedEmail)) {
+            return {
+                isValid: false,
+                message: 'El email no parece válido. Revisa el formato (ejemplo: nombre@dominio.com).'
+            };
+        }
+    }
+
+    const domainCheck = await checkEmailDomainExists(domainPart);
+    if (domainCheck.lookupFailed) {
+        return {
+            isValid: false,
+            message: 'No se pudo verificar el dominio "' + domainPart + '" del email. Revisa tu conexión e inténtalo de nuevo.'
+        };
+    }
+
+    if (!domainCheck.exists) {
+        return {
+            isValid: false,
+            message: 'El dominio "' + domainPart + '" del email es inválido.'
+        };
+    }
+
+    return {
+        isValid: true,
+        message: '',
+        normalizedEmail: normalizedEmail
+    };
+}
+
+async function checkEmailDomainExists(domain) {
+    const mxResult = await resolveDnsRecord(domain, 'MX');
+    if (mxResult === true) {
+        return {
+            exists: true,
+            lookupFailed: false
+        };
+    }
+
+    const [aResult, aaaaResult] = await Promise.all([
+        resolveDnsRecord(domain, 'A'),
+        resolveDnsRecord(domain, 'AAAA')
+    ]);
+
+    if (aResult === true || aaaaResult === true) {
+        return {
+            exists: true,
+            lookupFailed: false
+        };
+    }
+
+    const lookupResults = [mxResult, aResult, aaaaResult];
+
+    return {
+        exists: false,
+        lookupFailed: lookupResults.every(function(result) {
+            return result === null;
+        })
+    };
+}
+
+async function resolveDnsRecord(domain, recordType) {
+    let receivedDnsResponse = false;
+
+    for (let i = 0; i < EMAIL_DNS_RESOLVER_ENDPOINTS.length; i += 1) {
+        const endpoint = EMAIL_DNS_RESOLVER_ENDPOINTS[i];
+        const queryUrl = endpoint + '?name=' + encodeURIComponent(domain) + '&type=' + encodeURIComponent(recordType);
+
+        try {
+            const response = await fetchWithTimeout(queryUrl, {
+                headers: {
+                    'Accept': 'application/dns-json'
+                }
+            }, EMAIL_DNS_LOOKUP_TIMEOUT_MS);
+
+            if (!response || !response.ok) {
+                continue;
+            }
+
+            const payload = await response.json();
+            receivedDnsResponse = true;
+
+            if (payload && payload.Status === 3) {
+                // NXDOMAIN (domain does not exist)
+                return false;
+            }
+
+            const answers = payload && Array.isArray(payload.Answer) ? payload.Answer : [];
+            const hasAnswer = answers.some(function(answer) {
+                return answer && typeof answer.data === 'string' && answer.data.trim().length > 0;
+            });
+
+            if (hasAnswer) {
+                return true;
+            }
+
+            if (payload && payload.Status === 0) {
+                return false;
+            }
+        } catch (error) {
+            // Try next resolver.
+        }
+    }
+
+    if (!receivedDnsResponse) {
+        return null;
+    }
+
+    return false;
+}
+
+function fetchWithTimeout(url, options, timeoutMs) {
+    return Promise.race([
+        fetch(url, options),
+        new Promise(function(_, reject) {
+            setTimeout(function() {
+                reject(new Error('Email DNS lookup timed out'));
+            }, timeoutMs);
+        })
+    ]);
+}
+
+function validatePhoneNumber(phoneValue) {
+    const rawPhone = (phoneValue || '').trim();
+
+    if (!rawPhone) {
+        return {
+            isValid: false,
+            message: 'El teléfono es obligatorio.'
+        };
+    }
+
+    // Quick reject of unexpected characters before parsing
+    const invalidCharsRegex = /[^0-9\s\+\-\(\)\.]/;
+    if (invalidCharsRegex.test(rawPhone)) {
+        return {
+            isValid: false,
+            message: 'El teléfono contiene caracteres no válidos.'
+        };
+    }
+
+    const hasLibPhoneNumber = Boolean(
+        window.libphonenumber &&
+        typeof window.libphonenumber.parsePhoneNumberFromString === 'function'
+    );
+
+    if (hasLibPhoneNumber) {
+        try {
+            // ES as default country keeps local numbers like 612345678 valid.
+            const parsedPhone = window.libphonenumber.parsePhoneNumberFromString(rawPhone, 'ES');
+
+            if (!parsedPhone || !parsedPhone.isPossible() || !parsedPhone.isValid()) {
+                return {
+                    isValid: false,
+                    message: 'El teléfono no es válido. Ejemplo: +34 612 34 56 78.'
+                };
+            }
+
+            return {
+                isValid: true,
+                message: '',
+                normalizedPhone: parsedPhone.number,
+                formattedPhone: parsedPhone.formatInternational()
+            };
+        } catch (error) {
+            return {
+                isValid: false,
+                message: 'No hemos podido validar el teléfono. Revisa el formato.'
+            };
+        }
+    }
+
+    // Fallback validation if library fails to load.
+    const phoneDigits = rawPhone.replace(/\D/g, '');
+    if (phoneDigits.length < 9) {
+        return {
+            isValid: false,
+            message: 'El teléfono debe tener al menos 9 dígitos.'
+        };
+    }
+
+    if (phoneDigits.length > 15) {
+        return {
+            isValid: false,
+            message: 'El teléfono es demasiado largo. Revisa el número.'
+        };
+    }
+
+    return {
+        isValid: true,
+        message: '',
+        normalizedPhone: rawPhone,
+        formattedPhone: rawPhone
+    };
+}
+
+function initPhoneFieldEnhancements() {
+    const phoneInput = document.getElementById('phone');
+
+    if (!phoneInput) return;
+
+    phoneInput.setAttribute('inputmode', 'tel');
+    phoneInput.setAttribute('autocomplete', 'tel');
+
+    phoneInput.addEventListener('blur', function() {
+        const currentValue = phoneInput.value.trim();
+        if (!currentValue) return;
+
+        const phoneValidation = validatePhoneNumber(currentValue);
+        if (phoneValidation.isValid && phoneValidation.formattedPhone) {
+            phoneInput.value = phoneValidation.formattedPhone;
+        }
+    });
+}
+
+async function submitForm(data, endpoint) {
+    const form = document.getElementById('contact-form');
+    const submitBtn = form.querySelector('.btn-submit');
+    const originalBtnText = submitBtn.textContent.trim() || 'Enviar Mensaje';
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.setAttribute('aria-busy', 'true');
+    
+    try {
+        const payload = {
+            "Nombre": data.name,
+            "Teléfono": data.phone,
+            "Email": data.email,
+            "Código Postal": data.postalcode || 'No indicado',
+            "Mensaje": data.message
+        };
+
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+
+        let result = null;
+        try {
+            result = await response.json();
+        } catch (error) {
+            result = null;
+        }
+
+        const providerRejected = Boolean(
+            result && (result.success === false || result.success === 'false' || result.ok === false)
+        );
+
+        if (!response.ok || providerRejected) {
+            throw new Error('Form provider rejected submission');
+        }
+
+        showFormMessage(
+            '¡Formulario enviado correctamente! En breve nos pondremos en contacto contigo.',
+            'success'
+        );
+        form.reset();
+        resetTurnstileWidget(form);
+        trackEvent('Contact', 'Form Submit', 'Success');
+
+    } catch (error) {
+        console.error('Contact form submission error:', error);
+        showFormMessage(
+            'No hemos podido enviar tu mensaje. Intenta de nuevo en unos minutos.',
+            'error'
+        );
+        trackEvent('Contact', 'Form Submit', 'Error');
+
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+        submitBtn.removeAttribute('aria-busy');
+
+        const messageContainer = document.getElementById('form-message');
+        if (messageContainer) {
+            messageContainer.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }
+    }
+}
+
+let timeoutId = null;
+
+function showFormMessage(message, type) {
+    const formMessage = document.getElementById('form-message');
+    
+    if (!formMessage) return;
+    
+    formMessage.textContent = message;
+    formMessage.className = 'form-message ' + type;
+    formMessage.style.display = 'block';
+
+    formMessage.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
+
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+    }
+    
+    // Hide message after 5 seconds
+    timeoutId = setTimeout(() => {
+        formMessage.style.display = 'none';
+    }, 10000);
+}
+
+// ======================================
+// Scroll to Top Button
+// ======================================
+
+function initScrollToTop() {
+    const scrollTopBtn = document.getElementById('scroll-top');
+    const logo = document.querySelector('.logo');
+    if (!scrollTopBtn && !logo) return;
+
+    function scrollToTopSmooth() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    function updateScrollTopVisibility() {
+        if (!scrollTopBtn) return;
+
+        const scrollY = window.scrollY;
+        const show = scrollY > 300;
+        scrollTopBtn.classList.toggle('visible', show);
+        const mobileCta = document.querySelector('.mobile-cta-widget');
+        if (mobileCta) mobileCta.classList.toggle('visible', show);
+    }
+
+    function syncScrollTopButtonState() {
+        updateScrollTopOffset();
+        updateScrollTopVisibility();
+    }
+    
+    // Show/hide button based on scroll position
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', syncScrollTopButtonState, { passive: true });
+    }
+    
+    // Scroll to top on click
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', function() {
+            scrollToTopSmooth();
+        });
+    }
+
+    if (logo) {
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            scrollToTopSmooth();
+        });
+    }
+
+    window.addEventListener('resize', debounce(syncScrollTopButtonState, 100));
+    window.addEventListener('load', syncScrollTopButtonState, { once: true });
+
+    syncScrollTopButtonState();
+
+    // Run one extra sync after entrance animations settle.
+    setTimeout(syncScrollTopButtonState, 650);
+
+    requestAnimationFrame(function() {
+        syncScrollTopButtonState();
+    });
+}
+
+// ======================================
+// Smooth Scroll for Anchor Links
+// ======================================
+
+function initSmoothScroll() {
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Skip if it's just "#"
+            if (href === '#') return;
+            
+            const target = document.querySelector(href);
+            
+            if (target) {
+                e.preventDefault();
+
+                // Read both geometry values before any writes to avoid forced reflow.
+                const header = document.querySelector('.header');
+                const headerHeight = header ? header.offsetHeight : 0;
+                const targetTop = target.getBoundingClientRect().top;
+
+                const targetPosition = targetTop + window.pageYOffset - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// ======================================
+// Cookie Consent Banner
+// ======================================
+
+const COOKIE_CONSENT_KEY = 'cookieConsentChoice';
+const MOBILE_BREAKPOINT_QUERY = '(max-width: 900px)';
+
+function initCookieBanner() {
+    const cookieBanner = document.getElementById('cookieBanner');
+    if (!cookieBanner) return;
+
+    const acceptBtn = document.getElementById('cookieAcceptBtn');
+    const rejectBtn = document.getElementById('cookieRejectBtn');
+    const storedChoice = safeGetLocalStorage(COOKIE_CONSENT_KEY);
+
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', function() {
+            handleCookieChoice('accepted', cookieBanner);
+        });
+    }
+
+    if (rejectBtn) {
+        rejectBtn.addEventListener('click', function() {
+            handleCookieChoice('rejected', cookieBanner);
+        });
+    }
+
+    window.addEventListener('resize', debounce(function() {
+        updateCookieBannerOffset(cookieBanner);
+    }, 100));
+
+    if (storedChoice === 'accepted' || storedChoice === 'rejected') {
+        setCookieBannerVisibility(cookieBanner, false);
+        if (storedChoice === 'accepted') initAnalyticsTracking();
+        return;
+    }
+
+    setCookieBannerVisibility(cookieBanner, true);
+}
+
+function initReopenCookieBanner() {
+    const reopenLink = document.getElementById('reopenCookieBanner');
+    if (!reopenLink) return;
+
+    const cookieBanner = document.getElementById('cookieBanner');
+    if (!cookieBanner) return;
+
+    reopenLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        safeRemoveLocalStorage(COOKIE_CONSENT_KEY);
+        setCookieBannerVisibility(cookieBanner, true);
+    });
+}
+
+function handleCookieChoice(choice, cookieBanner) {
+    safeSetLocalStorage(COOKIE_CONSENT_KEY, choice);
+    setCookieBannerVisibility(cookieBanner, false);
+    if (choice === 'accepted') initAnalyticsTracking();
+    trackEvent('Cookies', 'Consent', choice);
+}
+
+function setCookieBannerVisibility(cookieBanner, isVisible) {
+    if (!cookieBanner) return;
+
+    cookieBanner.hidden = !isVisible;
+
+    if (!isVisible) {
+        document.body.classList.remove('cookie-banner-visible');
+        document.documentElement.style.setProperty('--cookie-banner-offset', '0px');
+        setTimeout(updateScrollTopOffset, 500);
+        return;
+    }
+
+    // Measure after paint to capture final rendered height.
+    requestAnimationFrame(function() {
+        updateCookieBannerOffset(cookieBanner);
+    });
+}
+
+function updateCookieBannerOffset(cookieBanner) {
+    // ── READS (all geometry before any DOM writes) ──────────────────────────
+    const isMobile = window.matchMedia(MOBILE_BREAKPOINT_QUERY).matches;
+    const bannerVisible = isFloatingElementVisible(cookieBanner);
+    const bannerRect = bannerVisible ? cookieBanner.getBoundingClientRect() : null;
+    const viewportHeight = isMobile ? window.innerHeight : 0;
+
+    // ── COMPUTE ─────────────────────────────────────────────────────────────
+    const extraSpacing = isMobile ? 10 : 12;
+    const bannerOffset = bannerRect ? Math.ceil(bannerRect.height + extraSpacing) : 0;
+
+    let scrollTopOffset = 0;
+    if (isMobile && bannerRect) {
+        scrollTopOffset = Math.max(0, Math.ceil(viewportHeight - bannerRect.top) + 10);
+    }
+
+    // ── WRITES (all at once, after all reads) ────────────────────────────────
+    if (bannerVisible) {
+        document.body.classList.add('cookie-banner-visible');
+        document.documentElement.style.setProperty('--cookie-banner-offset', bannerOffset + 'px');
+    } else {
+        document.body.classList.remove('cookie-banner-visible');
+        document.documentElement.style.setProperty('--cookie-banner-offset', '0px');
+    }
+    document.documentElement.style.setProperty('--scroll-top-offset', isMobile ? scrollTopOffset + 'px' : '0px');
+}
+
+function updateScrollTopOffset() {
+    if (!window.matchMedia(MOBILE_BREAKPOINT_QUERY).matches) {
+        document.documentElement.style.setProperty('--scroll-top-offset', '0px');
+        return;
+    }
+
+    const floatingElements = [
+        document.getElementById('cookieBanner')
+    ];
+
+    // Read all geometry first, then write — avoids forced reflow.
+    const viewportHeight = window.innerHeight;
+    const rects = floatingElements.map(el => ({
+        el,
+        rect: isFloatingElementVisible(el) ? el.getBoundingClientRect() : null
+    }));
+
+    let maxDistanceFromBottomToTop = 0;
+
+    rects.forEach(({ rect }) => {
+        if (!rect) return;
+
+        const distanceFromBottomToTop = Math.ceil(viewportHeight - rect.top);
+
+        if (distanceFromBottomToTop > maxDistanceFromBottomToTop) {
+            maxDistanceFromBottomToTop = distanceFromBottomToTop;
+        }
+    });
+
+    const extraGap = maxDistanceFromBottomToTop > 0 ? 10 : 0;
+    const offset = Math.max(0, maxDistanceFromBottomToTop + extraGap);
+
+    document.documentElement.style.setProperty('--scroll-top-offset', offset + 'px');
+}
+
+function isFloatingElementVisible(element) {
+    if (!element || element.hidden) return false;
+
+    const computedStyle = window.getComputedStyle(element);
+    if (computedStyle.display === 'none' || computedStyle.visibility === 'hidden') {
+        return false;
+    }
+
+    const elementRect = element.getBoundingClientRect();
+    return elementRect.width > 0 && elementRect.height > 0;
+}
+
+function safeGetLocalStorage(key) {
+    try {
+        return window.localStorage.getItem(key);
+    } catch (error) {
+        return null;
+    }
+}
+
+function safeSetLocalStorage(key, value) {
+    try {
+        window.localStorage.setItem(key, value);
+    } catch (error) {
+        // Ignore write errors (private mode, blocked storage, etc.).
+    }
+}
+
+function safeRemoveLocalStorage(key) {
+    try {
+        window.localStorage.removeItem(key);
+    } catch (error) {
+        // Ignore errors.
+    }
+}
+
+// ======================================
+// Utility Functions
+// ======================================
+
+// Phone number formatting (optional enhancement)
+function formatPhoneNumber(input) {
+    const phoneInput = document.getElementById('phone');
+    
+    if (!phoneInput) return;
+    
+    phoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        
+        // Format as +34 XXX XXX XXX
+        if (value.length > 0) {
+            if (value.startsWith('34')) {
+                value = '+' + value;
+            } else if (!value.startsWith('+')) {
+                value = '+34' + value;
+            }
+        }
+        
+        e.target.value = value;
+    });
+}
+
+// Call phone formatting if needed
+// formatPhoneNumber();
+
+// ======================================
+// Performance Optimizations
+// ======================================
+
+// Debounce function for scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Add sticky header on scroll (optional)
+window.addEventListener('scroll', debounce(function() {
+    const header = document.querySelector('.header');
+    
+    if (!header) return;
+    
+    if (window.pageYOffset > 100) {
+        header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+    } else {
+        header.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+    }
+}, 50));
+
+// ======================================
+// Analytics Event Tracking (Google Tag Manager)
+// ======================================
+
+const GTM_ID = 'GTM-MJ6NWRV4';
+
+// Only called after the user has accepted cookies.
+function initAnalyticsTracking() {
+    loadGoogleTagManager();
+
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', function() {
+            trackEvent('Contact', 'Phone Click', this.getAttribute('href'));
+        });
+    });
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', function() {
+            trackEvent('Contact', 'WhatsApp Click', this.getAttribute('href'));
+        });
+    });
+
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', function() {
+            trackEvent('Contact', 'Email Click', this.getAttribute('href'));
+        });
+    });
+
+    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+        button.addEventListener('click', function() {
+            trackEvent('CTA', 'Click', this.textContent.trim());
+        });
+    });
+}
+
+function loadGoogleTagManager() {
+    if (window._gtmLoaded || document.getElementById('gtm-script')) return;
+    window._gtmLoaded = true;
+
+    const inject = function() {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        const script = document.createElement('script');
+        script.id = 'gtm-script';
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+        document.head.appendChild(script);
+    };
+
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(inject, { timeout: 2000 });
+    } else {
+        setTimeout(inject, 1);
+    }
+}
+
+function trackEvent(category, action, label) {
+    if (safeGetLocalStorage(COOKIE_CONSENT_KEY) !== 'accepted') return;
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        event: 'track_event',
+        event_category: category,
+        event_action: action,
+        event_label: label
+    });
+}
+
+// ======================================
+// Language Switcher
+// ======================================
+
+function initLangSwitcher() {
+    const switcher = document.querySelector('.lang-switcher');
+    if (!switcher) return;
+
+    const btn = switcher.querySelector('.lang-current');
+
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = switcher.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!switcher.contains(e.target)) {
+            switcher.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            switcher.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
+
+// ======================================
+// Browser Language Suggestion
+// ======================================
+
+const BROWSER_LANGUAGE_CHOICE_KEY = 'browserLanguageChoice';
+
+function initBrowserLanguageSuggestion() {
+    const supportedLanguages = ['es', 'ca', 'en'];
+    const currentLanguage = document.documentElement.lang.toLowerCase().split('-')[0];
+    const browserLanguage = (navigator.languages && navigator.languages[0] || navigator.language || 'en')
+        .toLowerCase()
+        .split('-')[0];
+    const preferredLanguage = supportedLanguages.includes(browserLanguage) ? browserLanguage : 'en';
+
+    if (currentLanguage === preferredLanguage) return;
+    if (safeGetLocalStorage(BROWSER_LANGUAGE_CHOICE_KEY)) return;
+
+    const content = {
+        es: {
+            languageLabel: 'Idioma detectado',
+            title: '¿Quieres ver la web en español?',
+            description: 'Tu navegador está configurado en español.',
+            confirm: 'Sí, ver en español',
+            cancel: 'No, continuar aquí',
+            flag: '<svg viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg>'
+        },
+        ca: {
+            languageLabel: 'Idioma detectat',
+            title: 'Vols veure el web en català?',
+            description: 'El teu navegador està configurat en català.',
+            confirm: 'Sí, veure-la en català',
+            cancel: 'No, continuar aquí',
+            flag: '<svg viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#fcdd09"/><rect y="0.222" width="3" height="0.222" fill="#da121a"/><rect y="0.667" width="3" height="0.222" fill="#da121a"/><rect y="1.111" width="3" height="0.222" fill="#da121a"/><rect y="1.556" width="3" height="0.222" fill="#da121a"/></svg>'
+        },
+        en: {
+            languageLabel: 'Detected language',
+            title: 'Would you like to view the website in English?',
+            description: 'Your browser is set to English.',
+            confirm: 'Yes, view in English',
+            cancel: 'No, stay here',
+            flag: '<svg viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#012169"/><path d="M0,0 L3,2 M3,0 L0,2" stroke="#fff" stroke-width="0.4"/><path d="M0,0 L3,2 M3,0 L0,2" stroke="#C8102E" stroke-width="0.25"/><path d="M1.5,0 V2 M0,1 H3" stroke="#fff" stroke-width="0.6"/><path d="M1.5,0 V2 M0,1 H3" stroke="#C8102E" stroke-width="0.4"/></svg>'
+        }
+    }[preferredLanguage];
+    const destinations = { es: '/', ca: '/ca/', en: '/en/' };
+    const dialog = document.createElement('div');
+    const titleId = 'browser-language-title';
+
+    dialog.className = 'browser-language-modal';
+    dialog.innerHTML = `
+        <div class="browser-language-modal__backdrop"></div>
+        <section class="browser-language-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="${titleId}">
+            <header class="browser-language-modal__header">
+                <div class="browser-language-modal__flag">${content.flag}</div>
+                <div>
+                    <span class="browser-language-modal__eyebrow">${content.languageLabel}</span>
+                    <h2 id="${titleId}">${content.title}</h2>
+                </div>
+            </header>
+            <p>${content.description}</p>
+            <div class="browser-language-modal__actions">
+                <button type="button" class="browser-language-modal__confirm">${content.confirm}</button>
+                <button type="button" class="browser-language-modal__cancel">${content.cancel}</button>
+            </div>
+        </section>
+    `;
+
+    function closeDialog() {
+        dialog.remove();
+        document.removeEventListener('keydown', handleKeydown);
+    }
+
+    function handleKeydown(event) {
+        if (event.key === 'Escape') closeDialog();
+    }
+
+    dialog.querySelector('.browser-language-modal__confirm').addEventListener('click', function() {
+        safeSetLocalStorage(BROWSER_LANGUAGE_CHOICE_KEY, preferredLanguage);
+        window.location.href = destinations[preferredLanguage];
+    });
+    dialog.querySelector('.browser-language-modal__cancel').addEventListener('click', function() {
+        safeSetLocalStorage(BROWSER_LANGUAGE_CHOICE_KEY, currentLanguage);
+        closeDialog();
+    });
+    dialog.querySelector('.browser-language-modal__backdrop').addEventListener('click', closeDialog);
+
+    document.body.appendChild(dialog);
+    document.addEventListener('keydown', handleKeydown);
+    dialog.querySelector('.browser-language-modal__confirm').focus({ preventScroll: true });
+}
