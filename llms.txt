@@ -15,6 +15,36 @@
 - [Pintura](https://merafex.es/pintura-barcelona/): Pintura de viviendas, locales y comunidades con preparación previa de superficies.
 - [Prevención de Robos](https://merafex.es/prevencion-robos-barcelona/): Evaluación por capas de puertas, cerraduras, ventanas y accesos comunes.
 
+## Versiones en Otros Idiomas
+
+### Català
+
+- [Inici](https://merafex.es/ca/)
+- [Obertura de Portes](https://merafex.es/ca/obertura-portes-barcelona/)
+- [Canvi de Panys i Bombins](https://merafex.es/ca/canvi-panys-barcelona/)
+- [Instal·lació d'Escuts de Seguretat](https://merafex.es/ca/installacio-escuts-seguretat-barcelona/)
+- [Serraller Urgent](https://merafex.es/ca/serraller-urgent-barcelona/)
+- [Serralleria per a Comunitats](https://merafex.es/ca/serralleria-comunitats-barcelona/)
+- [Reparació de Persianes](https://merafex.es/ca/reparacio-persianes-barcelona/)
+- [Instal·lació de Portes](https://merafex.es/ca/installacio-portes-barcelona/)
+- [Reixes i Tanques](https://merafex.es/ca/installacio-reixes-tanques-barcelona/)
+- [Pintura](https://merafex.es/ca/pintura-barcelona/)
+- [Prevenció de Robatoris](https://merafex.es/ca/prevencio-robatoris-barcelona/)
+
+### English
+
+- [Home](https://merafex.es/en/)
+- [Door Opening](https://merafex.es/en/door-opening-barcelona/)
+- [Lock Change and Lock Cylinders](https://merafex.es/en/lock-change-barcelona/)
+- [Security Shield Installation](https://merafex.es/en/security-shield-installation-barcelona/)
+- [Emergency Locksmith](https://merafex.es/en/emergency-locksmith-barcelona/)
+- [Community Locksmith Services](https://merafex.es/en/community-locksmith-barcelona/)
+- [Blind Repair](https://merafex.es/en/blind-repair-barcelona/)
+- [Door Installation](https://merafex.es/en/door-installation-barcelona/)
+- [Security Bars and Fences](https://merafex.es/en/security-bars-fences-installation-barcelona/)
+- [Painting](https://merafex.es/en/painting-barcelona/)
+- [Burglary Prevention](https://merafex.es/en/burglary-prevention-barcelona/)
+
 ## Zonas de Cobertura
 
 Barcelona capital (todos los barrios) y área metropolitana: Badalona, Santa Coloma de Gramenet, Sant Adrià de Besòs, Montcada i Reixac, Cerdanyola del Vallès, L'Hospitalet de Llobregat, Esplugues de Llobregat, Cornellà de Llobregat, Sant Just Desvern, Sant Feliu de Llobregat, Sant Boi de Llobregat, El Prat de Llobregat, Viladecans, Gavà, Castelldefels.
@@ -36,9 +66,3 @@ Barcelona capital (todos los barrios) y área metropolitana: Badalona, Santa Col
 - Métodos de pago: Visa, MasterCard, Bizum, transferencia bancaria o efectivo, al finalizar el servicio
 - Se emite factura siempre; no se realizan servicios sin IVA
 - Presupuesto: visita gratuita y sin compromiso para valorar la instalación; también valoración orientativa por fotos o vídeo
-
-## Optional
-
-- [Política de Privacidad](https://merafex.es/politica-privacidad.html)
-- [Aviso Legal](https://merafex.es/aviso-legal.html)
-- [Condiciones de Uso](https://merafex.es/condiciones-uso.html)
