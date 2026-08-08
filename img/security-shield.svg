@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Proteccion de seguridad</title>
+  <desc id="desc">Escudo verde con una marca de verificacion blanca</desc>
+  <circle cx="256" cy="256" r="248" fill="#4b9c27"/>
+  <circle cx="256" cy="256" r="192" fill="#fff"/>
+  <path fill="#f1f1f1" d="M327 77c69 31 117 100 117 179 0 109-88 197-197 197-42 0-81-13-113-36 25 12 53 19 83 19 109 0 197-88 197-197 0-63-29-120-75-156l-12-6z"/>
+  <path fill="#63c436" d="M256 120c-34 42-78 64-128 64 0 91 29 157 128 224 99-67 128-133 128-224-50 0-94-22-128-64z"/>
+  <path fill="#fff" d="m232 328-48-48 24-24 24 24 80-80 24 24-104 104z"/>
+</svg>
