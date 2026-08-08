@@ -1,4 +1,4 @@
-@import url("/styles/footer.css");
+@import url("/styles/footer.css?v=1533486fe438");
 
 /* ===================================
   CSS Variables & Reset
@@ -704,8 +704,8 @@ nav a:has(.fa-whatsapp) {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.45)),
     image-set(
-      url("../img/banner.webp") type("image/webp"),
-      url("../img/banner.jpg") type("image/jpeg")
+      url("../img/banner.webp?v=47ea6125f5e2") type("image/webp"),
+      url("../img/banner.jpg?v=82d141267aa9") type("image/jpeg")
     );
   background-size: cover;
   background-position: center center;
@@ -2236,7 +2236,7 @@ nav a:has(.fa-whatsapp) {
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.45)),
       image-set(
-        url("../img/banner-phone.webp") type("image/webp")
+        url("../img/banner-phone.webp?v=795bf37b0341") type("image/webp")
       );
   }
 
