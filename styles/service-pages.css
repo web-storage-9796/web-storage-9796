@@ -391,13 +391,20 @@ main {
 }
 
 .customer-reviews {
-  border-top: 1px solid var(--service-line);
+  background:
+    linear-gradient(135deg, rgba(11, 95, 199, 0.08), transparent 46%),
+    var(--service-surface);
+  border: 1px solid var(--service-line);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(8, 37, 83, 0.07);
   margin-top: 4rem;
-  padding-top: 3rem;
+  overflow: hidden;
+  padding: 3rem clamp(1rem, 4vw, 3.25rem);
+  position: relative;
 }
 
 .customer-reviews-header {
-  margin: 0 auto 2rem;
+  margin: 0 auto 2.25rem;
   max-width: 700px;
   text-align: center;
 }
@@ -407,15 +414,53 @@ main {
   font-size: 2rem;
   line-height: 1.2;
   margin: 0 0 0.75rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.customer-reviews-header h2::after {
+  background: var(--service-accent);
+  bottom: 0;
+  content: "";
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 3.25rem;
 }
 
 .customer-reviews-header p {
   color: var(--service-muted);
+  font-size: 1.05rem;
   margin: 0;
 }
 
 .customer-reviews-board {
-  min-height: 18rem;
+  background: #fff;
+  border: 1px solid rgba(8, 37, 83, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(8, 37, 83, 0.06);
+  height: 22rem;
+  overflow: hidden;
+  padding: clamp(0.5rem, 2vw, 1.25rem);
+  position: relative;
+}
+
+/* Skeleton shown from first render until reviews are loaded */
+.customer-reviews-board:not(:has(.sk-ww-google-reviews:not(:empty)))::before {
+  animation: customer-reviews-pulse 1.4s ease-in-out infinite alternate;
+  background: linear-gradient(90deg, #edf2f8, #f8fafc, #edf2f8);
+  border-radius: 4px;
+  content: "";
+  inset: clamp(0.5rem, 2vw, 1.25rem);
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes customer-reviews-pulse {
+  to {
+    opacity: 0.55;
+  }
 }
 
 .service-button--home {

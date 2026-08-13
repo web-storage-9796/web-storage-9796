@@ -65,6 +65,7 @@
 .fa-money-bill-wave::before { content: "\f53a"; }
 .fa-phone-alt::before    { content: "\f879"; }
 .fa-comment::before      { content: "\f075"; }
+.fa-plus::before         { content: "\2b"; }
 
 /* Brand icons */
 .fa-instagram::before    { content: "\f16d"; }

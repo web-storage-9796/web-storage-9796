@@ -1,9 +1,9 @@
 User-agent: *
 Allow: /
-Disallow: /aviso-legal.html
-Disallow: /condiciones-uso.html
-Disallow: /politica-cookies.html
-Disallow: /politica-privacidad.html
+Disallow: /aviso-legal/
+Disallow: /condiciones-uso/
+Disallow: /politica-cookies/
+Disallow: /politica-privacidad/
 
 User-agent: GPTBot
 Allow: /
