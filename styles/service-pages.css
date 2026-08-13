@@ -440,27 +440,8 @@ main {
   border: 1px solid rgba(8, 37, 83, 0.08);
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(8, 37, 83, 0.06);
-  height: 22rem;
-  overflow: hidden;
+  min-height: 28rem;
   padding: clamp(0.5rem, 2vw, 1.25rem);
-  position: relative;
-}
-
-/* Skeleton shown from first render until reviews are loaded */
-.customer-reviews-board:not(:has(.sk-ww-google-reviews:not(:empty)))::before {
-  animation: customer-reviews-pulse 1.4s ease-in-out infinite alternate;
-  background: linear-gradient(90deg, #edf2f8, #f8fafc, #edf2f8);
-  border-radius: 4px;
-  content: "";
-  inset: clamp(0.5rem, 2vw, 1.25rem);
-  position: absolute;
-  z-index: 1;
-}
-
-@keyframes customer-reviews-pulse {
-  to {
-    opacity: 0.55;
-  }
 }
 
 .service-button--home {
