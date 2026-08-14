@@ -1860,7 +1860,6 @@ nav a:has(.fa-whatsapp) {
   padding: var(--spacing-2xl) 0;
   background: var(--white);
   position: relative;
-  overflow: hidden;
 }
 
 .communities::before {
