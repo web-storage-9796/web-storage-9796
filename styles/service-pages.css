@@ -503,7 +503,7 @@ main {
 .service-card h2 {
   align-items: center;
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   gap: 0.6rem;
   margin-top: 0;
   margin-bottom: 0.55rem;
@@ -580,6 +580,10 @@ main {
 .service-section li,
 .service-faq-item p {
   color: var(--service-muted);
+}
+
+.service-card p {
+  font-size: 0.95rem;
 }
 
 .service-card--with-image {

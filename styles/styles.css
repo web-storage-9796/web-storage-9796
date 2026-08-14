@@ -915,13 +915,13 @@ nav a:has(.fa-whatsapp) {
 .service-title {
   color: var(--text-dark);
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
 }
 
 .service-description {
   color: var(--text-light);
-  font-size: 0.93rem;
+  font-size: 0.95rem;
   line-height: 1.65;
   margin: 0;
 }
@@ -1046,7 +1046,7 @@ nav a:has(.fa-whatsapp) {
 .feature-title {
   color: var(--white);
   margin-bottom: 0.6rem;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 700;
 }
 
@@ -1227,13 +1227,14 @@ nav a:has(.fa-whatsapp) {
 }
 
 .seo-content-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   color: var(--primary-color);
 }
 
 .seo-content-card p {
   margin-bottom: 0;
   color: var(--text-light);
+  font-size: 0.95rem;
 }
 
 .seo-content-cta {
@@ -1373,7 +1374,7 @@ nav a:has(.fa-whatsapp) {
 .contact {
   padding: var(--spacing-2xl) 0 4rem;
   background: var(--white);
-  position: relative;
+  font-size: 0.95rem;
   overflow: hidden;
 }
 
