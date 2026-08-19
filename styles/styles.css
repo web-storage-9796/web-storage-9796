@@ -695,21 +695,27 @@ nav a:has(.fa-whatsapp) {
   overflow: hidden;
 }
 
+.hero-image,
+.hero-image img {
+  display: block;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.hero-image img {
+  object-fit: cover;
+  object-position: center center;
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.45)),
-    image-set(
-      url("../img/banner.webp?v=47ea6125f5e2") type("image/webp"),
-      url("../img/banner.jpg?v=82d141267aa9") type("image/jpeg")
-    );
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.45));
   z-index: 0;
 }
 
@@ -2273,14 +2279,6 @@ nav a:has(.fa-whatsapp) {
   }
   h3 {
     font-size: 1.25rem;
-  }
-
-  .hero-overlay {
-    background-image:
-      linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.45)),
-      image-set(
-        url("../img/banner-phone.webp?v=795bf37b0341") type("image/webp")
-      );
   }
 
   .nav-wrapper.index {
