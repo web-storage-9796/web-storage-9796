@@ -2092,6 +2092,30 @@ nav a:has(.fa-whatsapp) {
   flex-shrink: 0;
 }
 
+.star-service-cta {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.8rem 1.25rem;
+  border-radius: var(--border-radius);
+  background: var(--accent-color);
+  color: #111827;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.star-service-cta:hover {
+  color: #111827;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
 /* --- Communities catalogue download banner --- */
 
 .communities-catalogue {
@@ -2393,7 +2417,7 @@ nav a:has(.fa-whatsapp) {
     text-align: left;
   }
 
-  .star-service-body .btn {
+  .star-service-body .star-service-cta {
     white-space: break-spaces;
     width: 100%;
     justify-content: center;
