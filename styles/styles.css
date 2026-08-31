@@ -1136,6 +1136,13 @@ nav a:has(.fa-whatsapp) {
   color: var(--accent-color);
 }
 
+.zone-column .zone-link {
+  color: inherit;
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+}
+
 .zones-note {
   text-align: center;
   padding: var(--spacing-lg) var(--spacing-xl);
@@ -2441,6 +2448,10 @@ nav a:has(.fa-whatsapp) {
 
   .contact-content {
     grid-template-columns: 1fr;
+  }
+
+  .google-reviews-board {
+    min-height: 0;
   }
 
 }

@@ -1,0 +1,29 @@
+{
+  "reviews": [{
+    "reviewer": {
+      "displayName": "MSLIS"
+    },
+    "starRating": "FIVE",
+    "comment": "Empresa muy seria y formal. Me atendieron muy rápido y con eficiencia. Personal muy amable y atento. Se agradece cuando lo necesitas. Muy buena relación calidad/precio.  Muy muy recomendable!!!! Muchas gracias por vuestro servicio!!!! Habéis ganado un cliente!!!!\n\n(Translated by Google)\nA very professional and reliable company. I received prompt and efficient service. The staff was very friendly and attentive. That\u0027s much appreciated when you need it. Excellent value for money. Highly recommended! Thank you so much for your service! You\u0027ve gained a customer!",
+    "createTime": "2026-07-03T09:59:36.403473Z",
+    "updateTime": "2026-07-03T09:59:36.403473Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por compartir tu experiencia! Nos alegra saber que quedaste satisfecha con el servicio y que valoras tanto la rapidez como la atención recibida. Te agradecemos el tiempo que has dedicado a escribir una reseña tan positiva. Ha sido un placer atenderte y estaremos encantados de ayudarte siempre que lo necesites. ¡Un saludo!",
+      "updateTime": "2026-07-04T14:32:53.986060Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xOck9XOURWVTVFVFV4M1VrSXRVR0ZmVFdVek9VRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Dani"
+    },
+    "starRating": "FIVE",
+    "comment": "La verdad es que muy contento con el servicio. Llame porque me había quedado fuera de casa y llegaron rápido y fueron muy amables en todo momento\n\n(Translated by Google)\nI\u0027m really happy with the service. I called because I was locked out of my house, and they arrived quickly and were very friendly throughout.",
+    "createTime": "2026-07-03T07:10:47.685407Z",
+    "updateTime": "2026-07-03T07:10:47.685407Z",
+    "reviewReply": {
+      "comment": "¡Gracias por dedicar unos minutos a dejarnos tu opinión, Dani! \nNos alegra mucho que quedaras contento tanto con la rapidez como con el trato. Ha sido un placer ayudarte. ¡Un saludo y gracias por confiar en Merafex!",
+      "updateTime": "2026-07-04T14:18:06.145215Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT20xMU5qVlFVakJLZVRZNGEySjNhSGgyVUVSTlQxRRAB"
+  }]
+}

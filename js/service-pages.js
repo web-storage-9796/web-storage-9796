@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("js-faq-ready");
-  initCustomerReviews();
   var mobileMenuButton = document.querySelector(".mobile-menu-btn");
   var navigationMenu = document.querySelector(".nav-menu");
 
@@ -87,73 +86,3 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(contactBar);
   }
 });
-
-function initCustomerReviews() {
-  var reviews = document.querySelector(".customer-reviews");
-  if (!reviews || !reviews.querySelector("[data-featurable-async]")) return;
-
-  observeFeaturableBranding(reviews);
-
-  function loadBundle() {
-    if (document.querySelector("script[data-featurable-bundle]")) return;
-
-    var preconnect = document.createElement("link");
-    preconnect.rel = "preconnect";
-    preconnect.href = "https://featurable.com";
-    preconnect.crossOrigin = "anonymous";
-    preconnect.dataset.featurablePreconnect = "true";
-    document.head.appendChild(preconnect);
-
-    var script = document.createElement("script");
-    script.src = "https://featurable.com/assets/bundle.js";
-    script.defer = true;
-    script.charset = "UTF-8";
-    script.dataset.featurableBundle = "true";
-    document.body.appendChild(script);
-  }
-
-  if (!("IntersectionObserver" in window)) {
-    loadBundle();
-    return;
-  }
-
-  var observer = new IntersectionObserver(function (entries) {
-    if (!entries.some(function (entry) { return entry.isIntersecting; })) return;
-    loadBundle();
-    observer.disconnect();
-  }, { rootMargin: "240px 0px", threshold: 0 });
-
-  observer.observe(reviews);
-}
-
-function hideFeaturableBranding(shadowRoot) {
-  if (!shadowRoot || shadowRoot.querySelector("[data-hide-featurable-branding]")) return;
-
-  var style = document.createElement("style");
-  style.dataset.hideFeaturableBranding = "true";
-  style.textContent = [
-    '[class*="Carousel-module__branding"]',
-    '[class*="Branding-module__"]',
-    '[class*="brandingContainer"]',
-    'a[href*="featurable.com"]',
-  ]
-    .map(function (selector) {
-      return selector + "{display:none!important;visibility:hidden!important;height:0!important;margin:0!important;padding:0!important;overflow:hidden!important;}";
-    })
-    .join("");
-
-  shadowRoot.appendChild(style);
-}
-
-function observeFeaturableBranding(reviews) {
-  function scanShadowRoots() {
-    reviews.querySelectorAll(".shadow-wrapper").forEach(function (wrapper) {
-      if (wrapper.shadowRoot) hideFeaturableBranding(wrapper.shadowRoot);
-    });
-  }
-
-  scanShadowRoots();
-
-  var observer = new MutationObserver(scanShadowRoots);
-  observer.observe(reviews, { childList: true, subtree: true });
-}

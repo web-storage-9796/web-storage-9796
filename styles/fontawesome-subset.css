@@ -19,6 +19,7 @@
 }
 
 .fas,
+.fa,
 .fa-solid {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -31,6 +32,7 @@
 }
 
 .fas,
+.fa,
 .fab,
 .fa-solid,
 .fa-brands {
@@ -50,6 +52,7 @@
 .fa-clock::before        { content: "\f017"; }
 .fa-tag::before          { content: "\f02b"; }
 .fa-arrow-left::before   { content: "\f060"; }
+.fa-arrow-right::before  { content: "\f061"; }
 .fa-arrow-up::before     { content: "\f062"; }
 .fa-key::before          { content: "\f084"; }
 .fa-certificate::before  { content: "\f0a3"; }

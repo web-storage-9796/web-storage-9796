@@ -1,0 +1,263 @@
+{
+  "reviews": [{
+    "reviewer": {
+      "displayName": "Daniela Molina Borderia"
+    },
+    "starRating": "FIVE",
+    "comment": "servicio impecable, muy amables y profesionales. Todo perfecto! 👌🏻\n\n(Translated by Google)\nImpeccable service, very friendly and professional. Everything was perfect! 👌🏻",
+    "createTime": "2026-07-21T17:26:04.105669Z",
+    "updateTime": "2026-07-21T17:26:04.105669Z",
+    "reviewReply": {
+      "comment": "Daniela, muchas gracias por tu comentario. 😊 Nos alegra saber que todo fue perfecto y que quedaste contenta con el servicio y el trato recibido.\nIntentamos siempre que nuestros clientes se sientan bien atendidos y acompañados durante todo el proceso. Ha sido un placer ayudarte",
+      "updateTime": "2026-07-26T11:29:27.975170Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pCYVRqbDZObTVVWWxwNVZIcHNORjlMUW1od1ZrRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Aya Ben Moumen"
+    },
+    "starRating": "FIVE",
+    "comment": "Buen servicio,\n\n(Translated by Google)\nGood service,",
+    "createTime": "2026-07-21T17:24:43.262529Z",
+    "updateTime": "2026-07-21T17:24:43.262529Z",
+    "reviewReply": {
+      "comment": "Aya, muchas gracias por tu valoración. Nos alegra saber que quedaste satisfecha con el servicio.",
+      "updateTime": "2026-07-26T11:26:04.812455Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT21WT2VrNUNOVVZxYm5kR1FtdFFkbTlyYUd3d05rRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Mar Luque Sánchez"
+    },
+    "starRating": "FIVE",
+    "comment": "Genial, un servicio excelente y súper amables, sin duda un acierto 💕\n\n(Translated by Google)\nGreat, excellent service and super friendly, definitely a great choice 💕",
+    "createTime": "2026-07-21T17:14:29.419121Z",
+    "updateTime": "2026-07-21T17:14:29.419121Z",
+    "reviewReply": {
+      "comment": "Nos encanta saber que ha sido un acierto contar con nosotros. Gracias por la confianza, estaremos encantados de ayudarte siempre que lo necesites, Mar😊",
+      "updateTime": "2026-07-25T17:53:54.372403Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pac2NHRjVVRzVtYTNkQ1UxSmFNV2xOZUhCeFltYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Rosa Ruf"
+    },
+    "starRating": "FIVE",
+    "comment": "Muy contenta con el servicio. Son rápidos y muy profesionales y sobretodo, formales, cosa que se agradece hoy en día.\n\n(Translated by Google)\nVery happy with the service. They are fast, very professional, and above all, courteous, which is much appreciated these days.",
+    "createTime": "2026-07-18T06:35:05.735786Z",
+    "updateTime": "2026-07-18T06:35:05.735786Z",
+    "reviewReply": {
+      "comment": "Rosa, muchas gracias por tus palabras. 😊 Nos alegra mucho saber que has quedado tan contenta con el servicio y con la forma de trabajar de nuestro equipo. Ha sido un placer ayudarte.",
+      "updateTime": "2026-07-25T17:48:36.146646Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT21aRlYyWnhkWFU0VTJVMExVeG9lalZsVVdocWNYYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "MARIA GAONA ORTEGA"
+    },
+    "starRating": "FIVE",
+    "comment": "Excelente servicio. Rápidos, profesionales y muy amables. Resolvieron el problema enseguida y a un precio justo. ¡Totalmente recomendados!\n\n(Translated by Google)\nExcellent service. Fast, professional, and very friendly. They resolved the problem immediately and at a fair price. Highly recommended!",
+    "createTime": "2026-07-12T18:51:45.668225Z",
+    "updateTime": "2026-07-12T18:51:45.668225Z",
+    "reviewReply": {
+      "comment": "Nos alegra mucho leer comentarios como este, Maria. 😊 Saber que quedaste satisfecha con la rapidez, el trato y la solución del problema nos anima a seguir trabajando así.\nHa sido un placer ayudarte y esperamos poder atenderte de nuevo cuando lo necesites",
+      "updateTime": "2026-07-25T17:45:15.255874Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xob1NtcHdTa3BVZDE5WWQyODBOVkEwZERkblMwRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Yolanda Husillos"
+    },
+    "starRating": "FIVE",
+    "comment": "Muy satisfecha, servicio rápido y buenos profesionales\n\n(Translated by Google)\nVery satisfied, fast service and good professionals",
+    "createTime": "2026-07-12T17:25:48.544176Z",
+    "updateTime": "2026-07-12T17:25:48.544176Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu valoración, Yolanda!  Nos alegra saber que quedaste muy satisfecha con el servicio y con el trato recibido.",
+      "updateTime": "2026-07-25T12:02:48.630163Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xwTFJuQk9UMDFNTlVacE1tbDVjRTQ0TUZGaVoxRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Alex Sanz Husillos"
+    },
+    "starRating": "FIVE",
+    "comment": "Rapidez y trato genial!\n\n(Translated by Google)\nFast and great service!",
+    "createTime": "2026-07-12T17:13:15.414734Z",
+    "updateTime": "2026-07-12T17:13:15.414734Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu valoración, Alex!  Nos alegra mucho saber que quedaste satisfecho con el servicio y el trato recibido.\nHa sido un placer ayudarte. Gracias por confiar en Cerrajería Merafex, estaremos encantados de atenderte de nuevo cuando lo necesites.",
+      "updateTime": "2026-07-25T12:01:39.266390Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pOWVVWVnlUVmwwTjFwbE1UZHpabTAwY0RCRGIxRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Ana Maria Plumed"
+    },
+    "starRating": "FIVE",
+    "comment": "Muy buen trabajo de pintura. Fueron puntuales, cuidadosos y dejaron un acabado impecable. Quedé muy satisfecha con el resultado. Totalmente recomendables.\n\n(Translated by Google)\nExcellent paint job. They were punctual, careful, and left a flawless finish. I was very satisfied with the result. Highly recommended.",
+    "createTime": "2026-07-11T12:11:03.274469Z",
+    "updateTime": "2026-07-11T12:11:03.274469Z",
+    "reviewReply": {
+      "comment": "Muchas gracias por tu valoración Ana María. Nos alegra mucho saber que has quedado satisfecha con el trabajo de pintura realizado. 😊\n\nPara nosotros es muy importante cuidar cada detalle, desde la puntualidad y el trato durante el servicio hasta el acabado final.\n\nMuchas gracias por confiar en Cerrajería Merafex. Estaremos encantados de ayudarte de nuevo con cualquier trabajo de pintura, mantenimiento o mejora que necesites.",
+      "updateTime": "2026-07-25T12:00:11.385151Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT205WU9EWXpTVFpuZDJNd00zSnBSWEUzU214M1ZFRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Nana Sun"
+    },
+    "starRating": "FIVE",
+    "comment": "(Translated by Google) The truth is that we are super happy with the service provided!! :)\n\nThis morning I called them because my parents wanted to put a security shield on the door of their house before leaving on vacation, and a few hours later everything was installed and done, and the woman who attended to us was super friendly and approachable and the technician who installed everything for us was also super nice and professional\n\nThank you very much for everything! We will not hesitate to contact you for anything else we need :)\n\n(Original)\nLa veritat es que estem super contents amb el servei donat !! :)\n\nAquest matí vaig trucar-los perquè els meus pares volien posar un escut de seguretat a la porta de casa abans de marxar de vacances, i unes hores després ja estava tot instal·lat i fet, i la dona que ens ha atès super amable i propera i el tècnic que ens ho ha instal·lat tot també super agradable i professional\n\nMoltissimes gràcies per tot! No dubtarem a contactar amb vosaltres per a qualsevol altra cosa que necessitem :)",
+    "createTime": "2026-07-10T17:03:25.516677Z",
+    "updateTime": "2026-07-10T19:05:35.398017Z",
+    "reviewReply": {
+      "comment": "Moltes gràcies per la vostra valoració! Ens alegra molt saber que els teus pares han quedat tant contents amb el servei i amb la instal·lació de l’escut de seguretat abans de marxar de vacances.\n\nPer nosaltres és molt important oferir un tracte proper i de confiança, tant en l’atenció com en la feina del nostre tècnic.\n\nMoltes gràcies per confiar en Cerrajería Merafex. Estarem encantats d’ajudar-vos sempre que ens necessiteu! 😊",
+      "updateTime": "2026-07-25T11:55:10.736386Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT201a1dVUmpWM0pIUWxoWFZqbEJiSE14UldoME5sRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "adribe"
+    },
+    "starRating": "FIVE",
+    "comment": "Muy atentos y profesionales\n\n(Translated by Google)\nVery attentive and professional",
+    "createTime": "2026-07-06T15:17:43.193529Z",
+    "updateTime": "2026-07-06T15:17:43.193529Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu reseña! Nos alegra saber que nuestra atención y profesionalidad estuvieron a la altura de tus expectativas. Ha sido un placer atenderte. ¡Un saludo!",
+      "updateTime": "2026-07-07T04:43:24.621678Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2paNGEwSkdaMjVTWDJsSWR6aDRlVmt5YTJaU1VYYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Albert Blasco Casas"
+    },
+    "starRating": "FIVE",
+    "comment": "Muy recomendable, atención al cliente super rápido y muy profesional.\n\n(Translated by Google)\nHighly recommended, super fast and very professional customer service.",
+    "createTime": "2026-07-05T08:54:12.964985Z",
+    "updateTime": "2026-07-05T08:54:12.964985Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por dar tu opinión, Albert! Nos alegra saber que quedaste satisfecho con la atención recibida y que nuestro equipo pudo ayudarte de forma rápida y profesional. Agradecemos mucho tu recomendación y esperamos volver a ayudarte cuando lo necesites. ¡Un saludo!",
+      "updateTime": "2026-07-07T04:42:45.937600Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT21WcFJHczFORWN3U1dkalJUTmtkbmRxVjBkTU4wRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "MARIA ROSA GALLEGO FRECHILLA"
+    },
+    "starRating": "FIVE",
+    "comment": "Muy buen trabajo y rapidez en el servicio. Lo recomiendo mucho.\n\n(Translated by Google)\nExcellent work and fast service. I highly recommend them.",
+    "createTime": "2026-07-05T08:06:05.124896Z",
+    "updateTime": "2026-07-05T08:06:05.124896Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por recomendarnos, Maria Rosa! Nos alegra saber que quedaste contenta con nuestro trabajo y con la rapidez del servicio. Ha sido un placer atenderte.  ¡Un saludo! ",
+      "updateTime": "2026-07-07T04:40:29.961810Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tGc1MydGpPSFowVDBjNVFWZG9SMnBWVlhWUlZFRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Sandra Piedra"
+    },
+    "starRating": "FIVE",
+    "comment": "Servicio rápido y profesional. Gracias\n\n(Translated by Google)\nFast and professional service. Thank you.",
+    "createTime": "2026-07-04T17:25:06.099513Z",
+    "updateTime": "2026-07-04T17:25:06.099513Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tus palabras, Sandra! Nos encanta saber que quedaste satisfecha con nuestro servicio. Ha sido un placer ayudarte. ¡Un saludo y gracias por confiar en Merafex!",
+      "updateTime": "2026-07-07T04:37:43.651090Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xOMk1tRlBhMHBPUzB0YWFEbHhaazB0V205QmNtYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Isabel Franco Peló"
+    },
+    "starRating": "FIVE",
+    "comment": "Todo bien me cambiaron el cerrojo rápidamente y el juego de llaves\n\n(Translated by Google)\nEverything was fine, they quickly replaced the lock and the set of keys.",
+    "createTime": "2026-07-04T11:25:59.535680Z",
+    "updateTime": "2026-07-04T11:25:59.535680Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu reseña, Isabel! Nos alegra saber que quedaste contenta con el servicio y que todo fue rápido. Gracias por confiar en Merafex y por dedicar unos minutos a compartir tu experiencia. ¡Un saludo!",
+      "updateTime": "2026-07-04T14:20:27.096670Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xSNFVGQjJRMjFFZEd3MExWWTBNV3hqVkhreVptYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Carmen Montañés Sonsona"
+    },
+    "starRating": "FIVE",
+    "comment": "Geniales, son muy profesiones, serios y rápidos!!!👍\n\n(Translated by Google)\nGreat! They\u0027re very professional, serious, and fast! 👍",
+    "createTime": "2026-07-03T18:43:58.140562Z",
+    "updateTime": "2026-07-03T18:43:58.140562Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu reseña, Carmen! Nos alegra mucho saber que tu experiencia fue tan positiva. Comentarios como el tuyo nos animan a seguir trabajando con la misma seriedad, rapidez y dedicación. ¡Gracias por confiar en Merafex! 😊",
+      "updateTime": "2026-07-04T14:22:37.631216Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT201R2JGaExhSE40Y1VRNVFrdGtObTB3VFVwRk4wRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Miguel Angel Martinez"
+    },
+    "starRating": "FIVE",
+    "comment": "Buen servicio!!\n\n(Translated by Google)\nGreat service!!",
+    "createTime": "2026-07-03T18:37:01.377757Z",
+    "updateTime": "2026-07-03T18:37:01.377757Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu reseña, Miguel Ángel! Nos alegra saber que quedaste satisfecho con el servicio. Gracias por confiar en Merafex y por dedicar un momento a compartir tu experiencia. ¡Un saludo!",
+      "updateTime": "2026-07-04T14:23:59.845424Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tORGNsbDBabnBTVERoc01WSlNkV1ZFZUhKRVRWRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Nerea"
+    },
+    "starRating": "FIVE",
+    "comment": "Se rompió la persiana del balcón y se quedó toda entera enrollada arriba, quería repararla urgentemente. Me puse en contacto con ellos y en un momento ya tenía al técnico en casa y todo arreglado. Servicio eficiente. Repetiré.\n\n(Translated by Google)\nThe balcony blind broke and was completely rolled up; I needed it repaired urgently. I contacted them, and in no time, the technician was at my house and everything was fixed. Efficient service. I\u0027ll use them again.",
+    "createTime": "2026-07-03T16:54:22.395908Z",
+    "updateTime": "2026-07-03T16:54:22.395908Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu reseña, Nerea! Nos alegra saber que pudimos ayudarte cuando más lo necesitabas y que quedaste satisfecha con el servicio. Gracias por confiar en Merafex y por compartir tu experiencia. Será un placer volver a ayudarte siempre que lo necesites. ¡Un saludo!",
+      "updateTime": "2026-07-04T14:25:08.711025Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pObU5tY3hTbVpuY0ZVeFkwZDNUQzA1VWxKMGRVRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "Soledad Gallego"
+    },
+    "starRating": "FIVE",
+    "comment": "Muy buenos profesionales, fueron rápidos y muy atentos. Los recomiendo mucho.\n\n(Translated by Google)\nExcellent professionals, they were quick and very attentive. I highly recommend them.",
+    "createTime": "2026-07-03T11:16:01.972416Z",
+    "updateTime": "2026-07-03T11:38:35.817031Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu reseña, Soledad! Nos alegra saber que quedaste satisfecha con el servicio y con la atención recibida. Gracias también por recomendarnos y por confiar en Merafex. ¡Un saludo!",
+      "updateTime": "2026-07-04T14:27:18.059031Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT25BdFNHRklWR05GVVZwR04xcHVTa3h4TjFsaFgwRRAB"
+  }, {
+    "reviewer": {
+      "displayName": "E. Muñoz"
+    },
+    "starRating": "FIVE",
+    "comment": "Mi experiencia a sido muy grata, eficacia y seriedad a un precio razonable.\nLo recomiendo\n\n(Translated by Google)\nMy experience has been very pleasant; efficient and professional at a reasonable price. I recommend them.",
+    "createTime": "2026-07-03T11:30:27.425723Z",
+    "updateTime": "2026-07-03T11:30:27.425723Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu reseña! Nos alegra saber que tu experiencia con Merafex ha sido positiva. Agradecemos que valores nuestra eficacia, seriedad y la relación calidad-precio. Gracias también por recomendarnos. ¡Un saludo!",
+      "updateTime": "2026-07-04T14:28:45.065857Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT21GU1RscFZOMGRMTjIxVmEzZEtTRkZrT1ZBd2RXYxAB"
+  }, {
+    "reviewer": {
+      "displayName": "Susana Sanz"
+    },
+    "starRating": "FIVE",
+    "comment": "He utilizado los servicios de la cerrajería Merafex, y la recomiendo al 100%.\nBuenos precios, buen servicio y sobre todo muy buenos profesionales. Así da gusto.\n\n(Translated by Google)\nI\u0027ve used Merafex locksmith services, and I highly recommend them.\nGood prices, good service, and above all, excellent professionals. It\u0027s a pleasure to work with them.",
+    "createTime": "2026-07-03T10:18:19.045012Z",
+    "updateTime": "2026-07-03T10:18:19.045012Z",
+    "reviewReply": {
+      "comment": "¡Muchas gracias por tu reseña, Susana! Nos alegra saber que quedaste tan satisfecha con el servicio. Gracias por destacar nuestra profesionalidad y por recomendarnos. Comentarios como el tuyo nos animan a seguir trabajando igual cada día. ¡Un saludo y gracias por confiar en Merafex!",
+      "updateTime": "2026-07-04T14:29:46.948128Z"
+    },
+    "name": "accounts/101324236554558612892/locations/1311968247988972407/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xGSFJWSlphamhpZEVWNVZrbDZRVGxGYUVSNVdtYxAB"
+  }]
+}
