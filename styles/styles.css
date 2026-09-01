@@ -1136,6 +1136,354 @@ nav a:has(.fa-whatsapp) {
   color: var(--accent-color);
 }
 
+.zone-link {
+  color: inherit;
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.zone-page {
+  background-color: #f3f7fc;
+  background-image: linear-gradient(90deg, rgba(8, 37, 83, 0.035) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+}
+
+.service-main.zone-page {
+  padding: 9rem 0 clamp(3rem, 5vw, 4.5rem);
+}
+
+.zone-page-inner {
+  max-width: 1060px;
+}
+
+.zone-breadcrumbs {
+  margin-bottom: 1.25rem;
+}
+
+.zone-breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.zone-breadcrumbs li {
+  color: #62718a;
+  font-size: 0.82rem;
+}
+
+.zone-breadcrumbs li + li::before {
+  content: "/";
+  margin-right: 0.45rem;
+}
+
+.zone-breadcrumbs a {
+  color: #304e78;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.zone-page-header {
+  background: linear-gradient(135deg, #082553, #104783);
+  border-bottom: 4px solid var(--accent-color);
+  box-shadow: 0 18px 34px rgba(8, 37, 83, 0.16);
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: none;
+  padding: clamp(1.75rem, 4vw, 3.25rem);
+}
+
+.zone-page-header h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: 1.08;
+  margin: 0 0 1rem;
+  max-width: 16ch;
+}
+
+.zone-page-header .service-eyebrow {
+  color: #f8cd62;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.zone-intro {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.06rem;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 46rem;
+}
+
+.zone-content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.zone-section {
+  background: var(--white);
+  border: 1px solid #d8e1ed;
+  border-radius: 8px;
+  padding: clamp(1.4rem, 3vw, 2.25rem);
+}
+
+.zone-section h2,
+.zone-faq h2,
+.zone-related h2 {
+  color: var(--primary-color);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  line-height: 1.2;
+  margin: 0 0 0.8rem;
+}
+
+.zone-section p,
+.zone-faq-item p {
+  color: #4b5b72;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.zone-section--primary {
+  border-top: 3px solid #0b5fc7;
+}
+
+.zone-section--tips {
+  background: #fffaf0;
+  border-color: #f0d89b;
+}
+
+.zone-section--tips h2 {
+  color: #704f04;
+}
+
+.zone-section--tips ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.zone-section--tips li {
+  color: #5a4b2c;
+  line-height: 1.65;
+  padding: 0.75rem 0 0.75rem 1.75rem;
+  position: relative;
+}
+
+.zone-section--tips li + li {
+  border-top: 1px solid rgba(112, 79, 4, 0.17);
+}
+
+.zone-section--tips li::before {
+  color: #b37c06;
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.75rem;
+  font-weight: 900;
+  left: 0.2rem;
+  position: absolute;
+  top: 0.96rem;
+}
+
+.zone-section--situation {
+  background: #eaf2fc;
+  border-color: #bdd2ee;
+  border-left: 4px solid #0b5fc7;
+}
+
+.zone-section--situation h2 {
+  color: #123d72;
+}
+
+.zone-services {
+  border-top: 1px solid #b9c7d8;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(2.25rem, 4vw, 3.25rem);
+}
+
+.zone-services > header {
+  max-width: 43rem;
+  margin-bottom: 1.5rem;
+}
+
+.zone-services > header h2 {
+  color: var(--primary-color);
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  margin: 0 0 0.6rem;
+}
+
+.zone-services > header p {
+  color: #52627a;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.zone-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.zone-service-card {
+  background: var(--white);
+  border: 1px solid #d7e1ed;
+  border-radius: 8px;
+  min-height: 12.5rem;
+  padding: 1.4rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.zone-service-card:hover {
+  border-color: #8eadd1;
+  box-shadow: 0 12px 25px rgba(8, 37, 83, 0.09);
+  transform: translateY(-2px);
+}
+
+.zone-service-card > i {
+  align-items: center;
+  background: #eaf2fc;
+  border-radius: 50%;
+  color: #0b5fc7;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.25rem;
+  justify-content: center;
+  width: 2.25rem;
+}
+
+.zone-service-card h3 {
+  font-size: 1.05rem;
+  margin: var(--spacing-sm) 0 0.4rem;
+}
+
+.zone-service-card h3 a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 180ms ease;
+}
+
+.zone-service-card h3 a:hover {
+  text-decoration-color: currentColor;
+}
+
+.zone-service-card p {
+  color: var(--text-light);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.zone-related--areas {
+  margin-top: 1.25rem;
+}
+
+.zone-faq,
+.zone-related {
+  background: transparent;
+  border: 0;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding: 0;
+}
+
+.zone-faq-list {
+  display: grid;
+  border-top: 1px solid #c8d3e1;
+}
+
+.zone-faq-item {
+  border-bottom: 1px solid #c8d3e1;
+  padding: 1.25rem 0;
+}
+
+.zone-faq-item h3 {
+  color: #183a68;
+  font-size: 1.05rem;
+  margin: 0 0 0.55rem;
+}
+
+.zone-related ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.zone-related li {
+  margin: 0;
+}
+
+.zone-related a {
+  color: #174b89;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #f2b735;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.28em;
+}
+
+.zone-actions {
+  align-items: center;
+  background: #082553;
+  border-bottom: 4px solid #f2b735;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding: 1.25rem;
+}
+
+.zone-actions .service-button {
+  margin: 0;
+}
+
+.zone-actions .service-button--home {
+  border-color: rgba(255, 255, 255, 0.78);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .zone-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zone-page {
+    background-size: 1.5rem 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .service-main.zone-page {
+    padding: 6rem 0 6.5rem;
+  }
+
+  .zone-page-header {
+    padding: 1.5rem;
+  }
+
+  .zone-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zone-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .zone-actions .service-button {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .zones-note {
   text-align: center;
   padding: var(--spacing-lg) var(--spacing-xl);
