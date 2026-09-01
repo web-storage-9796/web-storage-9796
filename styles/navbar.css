@@ -203,32 +203,3 @@
   .main-navbar .header-buttons { display: none; }
   .main-navbar .navbar > .lang-switcher { padding: 0 0.75rem 0 0; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
 }
-
-@media (max-width: 360px) {
-  .main-navbar .navbar {
-    padding: 0.75rem 0;
-  }
-
-  .main-navbar .navbar > .container {
-    padding: 0 0.75rem;
-  }
-
-  .main-navbar .logo img {
-    height: auto;
-    max-height: 32px;
-    max-width: 130px;
-  }
-
-  .main-navbar .navbar > .lang-switcher {
-    padding-right: 0.35rem;
-  }
-
-  .main-navbar .lang-current {
-    gap: 0.2rem;
-    padding: 0.45rem 0.4rem;
-  }
-
-  .main-navbar .lang-code {
-    display: none;
-  }
-}
