@@ -644,6 +644,7 @@ function showFormMessage(message, type) {
 function initScrollToTop() {
     const scrollTopBtn = document.getElementById('scroll-top');
     const logo = document.querySelector('.logo');
+    const contactCards = document.querySelector('.contact-info');
     if (!scrollTopBtn && !logo) return;
 
     function scrollToTopSmooth() {
@@ -660,7 +661,10 @@ function initScrollToTop() {
         const show = scrollY > 300;
         scrollTopBtn.classList.toggle('visible', show);
         const mobileCta = document.querySelector('.mobile-cta-widget');
-        if (mobileCta) mobileCta.classList.toggle('visible', show);
+        const contactCardsVisible = contactCards &&
+            contactCards.getBoundingClientRect().top < window.innerHeight &&
+            contactCards.getBoundingClientRect().bottom > 0;
+        if (mobileCta) mobileCta.classList.toggle('visible', show && !contactCardsVisible);
     }
 
     function syncScrollTopButtonState() {
