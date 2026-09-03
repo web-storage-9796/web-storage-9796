@@ -1161,8 +1161,6 @@ nav a:has(.fa-whatsapp) {
   background:
     linear-gradient(135deg, rgba(11, 95, 199, 0.1), transparent 48%),
     var(--light-bg);
-  content-visibility: auto;
-  contain-intrinsic-size: auto 40rem;
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
   position: relative;
 }
