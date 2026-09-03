@@ -203,3 +203,7 @@
   .main-navbar .header-buttons { display: none; }
   .main-navbar .navbar > .lang-switcher { padding: 0 0.75rem 0 0; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
 }
+
+@media (max-width: 360px) {
+  .main-navbar .lang-code { display: none; }
+}

@@ -1701,6 +1701,10 @@ nav a:has(.fa-whatsapp) {
   transform: translateY(-3px);
 }
 
+.mobile-cta-widget {
+  display: none;
+}
+
 /* ===================================
    Cookie Banner
    =================================== */
@@ -2493,6 +2497,53 @@ nav a:has(.fa-whatsapp) {
 
 /* Mobile Scroll-Top Adjustment */
 @media (max-width: 900px) {
+  .mobile-cta-widget {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translate(4rem, -50%);
+    transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
+    visibility: hidden;
+    z-index: 1200;
+  }
+
+  .mobile-cta-widget.visible {
+    opacity: 1;
+    transform: translate(0, -50%);
+    visibility: visible;
+  }
+
+  .mobile-cta-widget a {
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+    color: var(--white);
+    display: flex;
+    font-size: 1.2rem;
+    height: 48px;
+    justify-content: center;
+    text-decoration: none;
+    width: 48px;
+  }
+
+  .mobile-cta-widget-call {
+    background: var(--primary-color);
+  }
+
+  .mobile-cta-widget-whatsapp {
+    background: #25d366;
+  }
+
+  .mobile-cta-widget a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+  }
+
   .scroll-top {
     bottom: calc(1rem + var(--scroll-top-offset));
     right: 1rem;
