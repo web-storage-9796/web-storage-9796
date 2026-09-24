@@ -1,21 +1,20 @@
-/* Font Awesome 6.5.1 — subset (only icons used in this project) */
+/* Font Awesome Free 6.7.2 — subset generado por tools/generate-fontawesome-subset.mjs. No editar. */
+/* Licencia: https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1) */
 
 @font-face {
   font-family: "Font Awesome 6 Free";
   font-style: normal;
   font-weight: 900;
-  font-display: swap;
-  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2")
-    format("woff2");
+  font-display: block;
+  src: url("../fonts/fa-solid-900.subset.88ce6524.woff2?v=88ce65241098") format("woff2");
 }
 
 @font-face {
   font-family: "Font Awesome 6 Brands";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2")
-    format("woff2");
+  font-display: block;
+  src: url("../fonts/fa-brands-400.subset.ef6df47f.woff2?v=ef6df47f8489") format("woff2");
 }
 
 .fas,
@@ -33,8 +32,8 @@
 
 .fas,
 .fa,
-.fab,
 .fa-solid,
+.fab,
 .fa-brands {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -45,33 +44,58 @@
   text-rendering: auto;
 }
 
-/* Solid icons */
-.fa-star::before         { content: "\f005"; }
-.fa-check::before        { content: "\f00c"; }
-.fa-times::before        { content: "\f00d"; }
-.fa-clock::before        { content: "\f017"; }
-.fa-tag::before          { content: "\f02b"; }
-.fa-arrow-left::before   { content: "\f060"; }
-.fa-arrow-right::before  { content: "\f061"; }
-.fa-arrow-up::before     { content: "\f062"; }
-.fa-key::before          { content: "\f084"; }
-.fa-certificate::before  { content: "\f0a3"; }
-.fa-arrow-circle-right::before { content: "\f0a9"; }
-.fa-envelope::before     { content: "\f0e0"; }
-.fa-bolt::before         { content: "\f0e7"; }
-.fa-download::before     { content: "\f56d"; }
-.fa-euro-sign::before    { content: "\f153"; }
-.fa-university::before   { content: "\f19c"; }
-.fa-chart-line::before   { content: "\f201"; }
-.fa-map-marker-alt::before { content: "\f3c5"; }
-.fa-shield-alt::before   { content: "\f3ed"; }
-.fa-user-cog::before     { content: "\f4fe"; }
+/* Solid */
+.fa-arrow-left::before { content: "\f060"; }
+.fa-arrow-up::before { content: "\f062"; }
+.fa-award::before { content: "\f559"; }
+.fa-building-columns::before { content: "\f19c"; }
+.fa-check::before { content: "\f00c"; }
+.fa-chevron-left::before { content: "\f053"; }
+.fa-chevron-right::before { content: "\f054"; }
+.fa-clipboard-check::before { content: "\f46c"; }
+.fa-clock::before { content: "\f017"; }
+.fa-envelope::before { content: "\f0e0"; }
+.fa-euro-sign::before { content: "\f153"; }
+.fa-file-invoice::before { content: "\f570"; }
+.fa-language::before { content: "\f1ab"; }
+.fa-location-dot::before { content: "\f3c5"; }
 .fa-money-bill-wave::before { content: "\f53a"; }
-.fa-phone-alt::before    { content: "\f879"; }
-.fa-comment::before      { content: "\f075"; }
-.fa-plus::before         { content: "\2b"; }
+.fa-phone-flip::before { content: "\f879"; }
+.fa-plus::before { content: "\2b"; }
+.fa-star::before { content: "\f005"; }
+.fa-stopwatch::before { content: "\f2f2"; }
+.fa-tag::before { content: "\f02b"; }
+.fa-truck-fast::before { content: "\f48b"; }
+.fa-user-gear::before { content: "\f4fe"; }
+.fa-user-shield::before { content: "\f505"; }
 
-/* Brand icons */
-.fa-instagram::before    { content: "\f16d"; }
-.fa-whatsapp::before     { content: "\f232"; }
-.fa-facebook-f::before   { content: "\f39e"; }
+/* Brands */
+.fa-facebook-f::before { content: "\f39e"; }
+.fa-instagram::before { content: "\f16d"; }
+.fa-whatsapp::before { content: "\f232"; }
+
+:root {
+  --fa-bolt: "\f0e7";
+  --fa-building: "\f1ad";
+  --fa-calendar-days: "\f073";
+  --fa-check: "\f00c";
+  --fa-circle-arrow-right: "\f0a9";
+  --fa-city: "\f64f";
+  --fa-door-closed: "\f52a";
+  --fa-handshake: "\f2b5";
+  --fa-house: "\f015";
+  --fa-key: "\f084";
+  --fa-link: "\f0c1";
+  --fa-list-check: "\f0ae";
+  --fa-list-ol: "\f0cb";
+  --fa-lock: "\f023";
+  --fa-magnifying-glass: "\f002";
+  --fa-paint-roller: "\f5aa";
+  --fa-phone-flip: "\f879";
+  --fa-scale-balanced: "\f24e";
+  --fa-screwdriver-wrench: "\f7d9";
+  --fa-shield-halved: "\f3ed";
+  --fa-store: "\f54e";
+  --fa-triangle-exclamation: "\f071";
+  --fa-window-maximize: "\f2d0";
+}

@@ -319,6 +319,26 @@ main {
   content: "";
 }
 
+.service-hero--photo .service-hero-image {
+  opacity: 1;
+}
+
+.service-hero--photo::after {
+  background: linear-gradient(90deg, rgba(4, 26, 61, 0.92) 0%, rgba(8, 37, 83, 0.75) 35%, rgba(8, 37, 83, 0.2) 70%, rgba(8, 37, 83, 0) 100%);
+}
+
+.service-hero--photo .service-eyebrow,
+.service-hero--photo h1,
+.service-hero--photo .service-lede {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 720px) {
+  .service-hero--photo::after {
+    background: linear-gradient(180deg, rgba(4, 26, 61, 0.55) 0%, rgba(4, 26, 61, 0.7) 100%);
+  }
+}
+
 .service-eyebrow {
   color: #f8ca48;
   font-size: 0.85rem;
@@ -359,6 +379,7 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.55rem;
   font-weight: 800;
   min-height: 48px;
   padding: 0.8rem 1.25rem;
@@ -528,51 +549,96 @@ main {
 }
 
 .service-card h2::before {
-  content: "\f023";
+  content: var(--fa-lock);
 }
 
-.service-card--home h2::before {
-  content: "\f015";
+.service-section h2::before {
+  content: var(--fa-shield-halved);
 }
 
-.service-card--store h2::before {
-  content: "\f54e";
+/* Icono del título según el modificador de la tarjeta o sección */
+:is(.service-card--home, .service-section--home) h2::before {
+  content: var(--fa-house);
 }
 
-.service-card--building h2::before {
-  content: "\f1ad";
+:is(.service-card--store, .service-section--store) h2::before {
+  content: var(--fa-store);
 }
 
-.service-card--door h2::before {
-  content: "\f52b";
+:is(.service-card--building, .service-section--building) h2::before {
+  content: var(--fa-building);
 }
 
-.service-card--window h2::before {
-  content: "\f2d0";
+:is(.service-card--city, .service-section--city) h2::before {
+  content: var(--fa-city);
 }
 
-.service-card--key h2::before {
-  content: "\f084";
+:is(.service-card--door, .service-section--door) h2::before {
+  content: var(--fa-door-closed);
 }
 
-.service-card--shield h2::before {
-  content: "\f3ed";
+:is(.service-card--window, .service-section--window) h2::before {
+  content: var(--fa-window-maximize);
 }
 
-.service-card--tools h2::before {
-  content: "\f7d9";
+:is(.service-card--key, .service-section--key) h2::before {
+  content: var(--fa-key);
 }
 
-.service-card--screwdriver h2::before {
-  content: "\f54a";
+:is(.service-card--lock, .service-section--lock) h2::before {
+  content: var(--fa-lock);
 }
 
-.service-card--alert h2::before {
-  content: "\f071";
+:is(.service-card--shield, .service-section--shield) h2::before {
+  content: var(--fa-shield-halved);
 }
 
-.service-card--bolt h2::before {
-  content: "\f0e7";
+:is(.service-card--tools, .service-section--tools) h2::before {
+  content: var(--fa-screwdriver-wrench);
+}
+
+:is(.service-card--alert, .service-section--alert) h2::before {
+  content: var(--fa-triangle-exclamation);
+}
+
+:is(.service-card--bolt, .service-section--bolt) h2::before {
+  content: var(--fa-bolt);
+}
+
+:is(.service-card--phone, .service-section--phone) h2::before {
+  content: var(--fa-phone-flip);
+}
+
+:is(.service-card--steps, .service-section--steps) h2::before {
+  content: var(--fa-list-ol);
+}
+
+:is(.service-card--checklist, .service-section--checklist) h2::before {
+  content: var(--fa-list-check);
+}
+
+:is(.service-card--inspect, .service-section--inspect) h2::before {
+  content: var(--fa-magnifying-glass);
+}
+
+:is(.service-card--compare, .service-section--compare) h2::before {
+  content: var(--fa-scale-balanced);
+}
+
+:is(.service-card--handshake, .service-section--handshake) h2::before {
+  content: var(--fa-handshake);
+}
+
+:is(.service-card--calendar, .service-section--calendar) h2::before {
+  content: var(--fa-calendar-days);
+}
+
+:is(.service-card--paint, .service-section--paint) h2::before {
+  content: var(--fa-paint-roller);
+}
+
+:is(.service-card--link, .service-section--link) h2::before {
+  content: var(--fa-link);
 }
 
 .service-card p,
@@ -716,10 +782,6 @@ main {
   gap: 0.75rem;
 }
 
-.service-section h2::before {
-  content: "\f3ed";
-}
-
 .service-section > p {
   max-width: 790px;
 }
@@ -748,14 +810,15 @@ main {
 }
 
 .service-checklist li::before {
-  background: var(--service-accent);
-  border-radius: 50%;
-  content: "";
-  height: 0.6rem;
-  left: 0.25rem;
+  color: var(--service-accent);
+  content: var(--fa-check);
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.85rem;
+  font-weight: 900;
+  left: 0.15rem;
+  line-height: 1;
   position: absolute;
-  top: 0.84rem;
-  width: 0.6rem;
+  top: 0.72rem;
 }
 
 .service-faq {
@@ -903,7 +966,7 @@ main {
 }
 
 .service-section:has(.service-related) h2::before {
-  content: "\f02b";
+  content: var(--fa-link);
 }
 
 .footer {

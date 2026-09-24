@@ -1125,8 +1125,14 @@ nav a:has(.fa-whatsapp) {
   border-bottom: none;
 }
 
+.zone-column ul li a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .zone-column ul li::before {
-  content: "\f00c";
+  content: var(--fa-check);
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
@@ -1449,7 +1455,7 @@ nav a:has(.fa-whatsapp) {
 }
 
 .contact-card-link::after {
-  content: "\f0a9";
+  content: var(--fa-circle-arrow-right);
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
