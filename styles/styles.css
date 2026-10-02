@@ -1247,6 +1247,18 @@ nav a:has(.fa-whatsapp) {
   font-size: 0.95rem;
 }
 
+.seo-content-link {
+  display: inline-block;
+  margin-top: var(--spacing-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.seo-content-link:hover {
+  text-decoration: underline;
+}
+
 .seo-content-cta {
   text-align: center;
   margin: var(--spacing-xl) 0 0;
