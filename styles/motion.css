@@ -1,0 +1,181 @@
+/* ===================================
+   Tipografía y movimiento compartidos (inicio, servicios y legales)
+   =================================== */
+
+/* Manrope variable (SIL OFL 1.1), subset latin alojado en local */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/manrope-latin-wght.woff2?v=a30ddcd34970") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --font-display: "Manrope", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+  --duration-slow: 760ms;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(242, 182, 52, 0.35);
+  color: #0b1530;
+}
+
+/* ===================================
+   Transición entre páginas (View Transitions entre documentos)
+   =================================== */
+
+@view-transition {
+  navigation: auto;
+}
+
+.header {
+  view-transition-name: site-header;
+}
+
+::view-transition-old(root) {
+  animation: page-out 220ms var(--ease-in-out) both;
+}
+
+::view-transition-new(root) {
+  animation: page-in 460ms var(--ease-out) both;
+}
+
+@keyframes page-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+}
+
+/* ===================================
+   Entrada del hero
+   =================================== */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+}
+
+/* El título solo se desplaza: mantenerlo opaco no retrasa el LCP */
+@keyframes rise-in-solid {
+  from {
+    translate: 0 16px;
+  }
+}
+
+@keyframes hero-settle {
+  from {
+    scale: 1.07;
+  }
+}
+
+.hero-image img,
+.service-hero-image {
+  animation: hero-settle 2.4s var(--ease-out) both;
+}
+
+.hero-title,
+.service-hero h1 {
+  animation: rise-in-solid 900ms var(--ease-out) both;
+}
+
+.service-eyebrow {
+  animation: rise-in 700ms var(--ease-out) both;
+}
+
+.hero-subtitle,
+.service-lede {
+  animation: rise-in 800ms var(--ease-out) 120ms both;
+}
+
+.hero-buttons,
+.service-actions {
+  animation: rise-in 800ms var(--ease-out) 220ms both;
+}
+
+.hero-features {
+  animation: rise-in 800ms var(--ease-out) 340ms both;
+}
+
+/* ===================================
+   Revelado al hacer scroll (lo activa /js/motion.js?v=679624d4da08)
+   =================================== */
+
+html.js-reveal .reveal {
+  opacity: 0;
+  translate: 0 28px;
+  transition:
+    opacity var(--duration-slow) var(--ease-out),
+    translate var(--duration-slow) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.js-reveal .reveal.is-revealed {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* La barra latón de los títulos se dibuja al aparecer la cabecera */
+html.js-reveal .reveal:not(.is-revealed) :is(.section-title, .customer-reviews-header h2, .service-faq h2)::after {
+  scale: 0 1;
+}
+
+/* Al imprimir se muestra todo, se haya revelado o no */
+@media print {
+  html.js-reveal .reveal {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+/* ===================================
+   Movimiento reducido
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  html.js-reveal .reveal {
+    opacity: 1;
+    translate: none;
+  }
+}

@@ -6,7 +6,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../fonts/fa-solid-900.subset.88ce6524.woff2?v=88ce65241098") format("woff2");
+  src: url("../fonts/fa-solid-900.subset.f6cdc4c5.woff2?v=f6cdc4c546fe") format("woff2");
 }
 
 @font-face {
@@ -52,6 +52,7 @@
 .fa-check::before { content: "\f00c"; }
 .fa-chevron-left::before { content: "\f053"; }
 .fa-chevron-right::before { content: "\f054"; }
+.fa-circle-info::before { content: "\f05a"; }
 .fa-clipboard-check::before { content: "\f46c"; }
 .fa-clock::before { content: "\f017"; }
 .fa-envelope::before { content: "\f0e0"; }
@@ -75,11 +76,11 @@
 .fa-whatsapp::before { content: "\f232"; }
 
 :root {
+  --fa-arrow-right: "\f061";
   --fa-bolt: "\f0e7";
   --fa-building: "\f1ad";
   --fa-calendar-days: "\f073";
   --fa-check: "\f00c";
-  --fa-circle-arrow-right: "\f0a9";
   --fa-city: "\f64f";
   --fa-door-closed: "\f52a";
   --fa-handshake: "\f2b5";

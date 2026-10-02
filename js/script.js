@@ -268,7 +268,7 @@ async function validateForm(data) {
     if (!data.privacy) {
         return {
             isValid: false,
-            message: 'Debes aceptar la política de privacidad para continuar.'
+            message: 'Debes confirmar que has leído la política de privacidad para continuar.'
         };
     }
     
@@ -962,18 +962,7 @@ function debounce(func, wait) {
     };
 }
 
-// Add sticky header on scroll (optional)
-window.addEventListener('scroll', debounce(function() {
-    const header = document.querySelector('.header');
-    
-    if (!header) return;
-    
-    if (window.pageYOffset > 100) {
-        header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
-    }
-}, 50));
+// La sombra de la cabecera al hacer scroll se gestiona en /js/motion.js?v=679624d4da08 (.is-scrolled)
 
 // ======================================
 // Analytics Event Tracking (Google Tag Manager)

@@ -2,8 +2,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Política de Cookies | Merafex</title><meta name="description" content="Información legal de Política de Cookies | Merafex." /><link rel="canonical" href="https://merafex.es/politica-cookies/" />
     <meta name="robots" content="index, follow" />
-    <link rel="stylesheet" href="/styles/fontawesome-subset.css?v=c2c5ada662a7" />
-    <link rel="stylesheet" href="/styles/styles.css?v=d69fd93ed513" />
+    <link rel="stylesheet" href="/styles/fontawesome-subset.css?v=1d73ce587cff" />
+    <link rel="stylesheet" href="/styles/styles.css?v=a29103c0e57b" />
     <style>
       .legal-page {
         padding: 6rem 0 4rem;
@@ -80,7 +80,32 @@
       .cookie-table tr:hover {
         background: var(--light-bg);
       }
-    </style><style>.legal-content a { text-decoration: underline; text-decoration-thickness: 0.125em; text-underline-offset: 0.15em; }</style></head><body><header class="header">
+      @media (max-width: 640px) {
+        .cookie-table thead {
+          display: none;
+        }
+        .cookie-table,
+        .cookie-table tbody,
+        .cookie-table tr,
+        .cookie-table td {
+          display: block;
+          width: 100%;
+        }
+        .cookie-table tr {
+          border-bottom: 2px solid var(--primary-color);
+        }
+        .cookie-table td {
+          padding: 0.5rem 1rem;
+        }
+        .cookie-table td::before {
+          content: attr(data-label);
+          display: block;
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: var(--text-light);
+        }
+      }
+    </style><link rel="preload" href="/fonts/manrope-latin-wght.woff2?v=a30ddcd34970" as="font" type="font/woff2" crossorigin /><link rel="stylesheet" href="/styles/motion.css?v=892369e7730e" /><style>.legal-content a { text-decoration: underline; text-decoration-thickness: 0.125em; text-underline-offset: 0.15em; }</style><script src="/js/motion.js?v=679624d4da08" defer></script></head><body><header class="header">
       <nav class="navbar">
         <div class="container">
           <div class="nav-wrapper">
@@ -107,292 +132,297 @@
             <i class="fas fa-arrow-left"></i> Volver a inicio
           </a>
 
-          <h1>Política de Cookies</h1>
-          <p><strong>Última actualización:</strong> 11 de marzo de 2026</p>
+                              <h1>Política de Cookies</h1>
+          <p><strong>Última actualización:</strong> 2 de octubre de 2026</p>
 
-          <h2>1. ¿Qué son las Cookies?</h2>
+          <div class="info-box">
+            <p>
+              <strong
+                > <i class="fas fa-circle-info"></i> Resumen</strong
+              >
+            </p>
+            <p>
+              Este sitio web no utiliza cookies publicitarias. Solo guarda en su
+              navegador la información técnica necesaria para funcionar y, si lo
+              acepta, carga herramientas de analítica. Puede rechazarlas con el
+              mismo esfuerzo que aceptarlas y cambiar de opinión cuando quiera.
+            </p>
+          </div>
+
+          <h2>1. ¿Qué son las Cookies y Tecnologías Similares?</h2>
           <p>
-            Una cookie es un pequeño archivo de texto que un sitio web almacena
-            en su ordenador, tableta o teléfono móvil cuando lo visita. Las
-            cookies permiten que el sitio web recuerde sus acciones y
-            preferencias (como inicio de sesión, idioma, tamaño de fuente y
-            otras preferencias de visualización) durante un período de tiempo.
+            Una cookie es un pequeño archivo que un sitio web guarda en su
+            ordenador, tableta o teléfono móvil cuando lo visita. Existen otras
+            tecnologías con la misma función, como el almacenamiento local del
+            navegador (<em>localStorage</em> ), que permiten guardar o leer
+            información en su dispositivo. En esta política llamamos «cookies»
+            a todas ellas, ya que el artículo 22.2 de la Ley 34/2002, de
+            servicios de la sociedad de la información y de comercio
+            electrónico (LSSI-CE), se aplica por igual a todas.
           </p>
 
-          <h2>2. ¿Qué tipos de Cookies utilizamos?</h2>
+          <h2>2. Responsable</h2>
           <p>
-            En este sitio web utilizamos diferentes tipos de cookies según su
-            finalidad:
+            El responsable del sitio web y de las cookies propias es Cerrajería
+            Merafex, S.L. (NIF B88741087), con domicilio en Pl. de la
+            Universitat, 3, 08007 Barcelona, y email info@merafex.es. Las
+            cookies de terceros son responsabilidad de las empresas que las
+            instalan, que se identifican en el apartado 4.
           </p>
 
-          <h3>2.1. Cookies Técnicas (Necesarias)</h3>
+          <h2>3. Tipos de Cookies</h2>
+          <ul>
+            <li>
+              <strong>Técnicas y de personalización:</strong> son necesarias
+              para que el sitio web funcione o para prestar un servicio que
+              usted solicita (por ejemplo, recordar su elección sobre las
+              cookies o el idioma que ha elegido, o proteger el formulario
+              frente al spam). No requieren consentimiento.
+            </li>
+            <li>
+              <strong>Analíticas:</strong> permiten medir cuántas personas
+              visitan el sitio web y cómo lo usan. Solo se cargan si las
+              acepta.
+            </li>
+            <li>
+              <strong>Propias o de terceros:</strong> según las gestione
+              Merafex o otra empresa.
+            </li>
+            <li>
+              <strong>De sesión o persistentes:</strong> según se borren al
+              cerrar el navegador o permanezcan durante un tiempo.
+            </li>
+          </ul>
+
+          <h2>4. Cookies que Utilizamos</h2>
+          <h3>4.1. Técnicas y de personalización (no requieren consentimiento)</h3>
+                      <table class="cookie-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Titular</th>
+                  <th>Finalidad</th>
+                  <th>Duración</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Nombre"><strong>cookieConsentChoice</strong> (localStorage)</td>
+                  <td data-label="Titular">Merafex</td>
+                  <td data-label="Finalidad">Recordar si ha aceptado o rechazado las cookies analíticas</td>
+                  <td data-label="Duración">Hasta que borre los datos del navegador o cambie su elección</td>
+                </tr>
+                <tr>
+                  <td data-label="Nombre"><strong>browserLanguageChoice</strong> (localStorage)</td>
+                  <td data-label="Titular">Merafex</td>
+                  <td data-label="Finalidad">Recordar su respuesta a la sugerencia de idioma</td>
+                  <td data-label="Duración">Hasta que borre los datos del navegador</td>
+                </tr>
+                <tr>
+                  <td data-label="Nombre"><strong>Cloudflare Turnstile</strong></td>
+                  <td data-label="Titular">Cloudflare, Inc.</td>
+                  <td data-label="Finalidad">
+                    Verificar que el formulario de contacto lo envía una persona
+                    y no un programa automatizado. Solo se carga al llegar al
+                    formulario.
+                  </td>
+                  <td data-label="Duración">Durante la verificación</td>
+                </tr>
+              </tbody>
+            </table>
+
+          <h3>4.2. Analíticas (solo con su consentimiento)</h3>
           <p>
-            Son imprescindibles para el funcionamiento del sitio web. Sin ellas,
-            no podríamos prestar nuestros servicios. Estas cookies no requieren
-            consentimiento del usuario.
+            Si pulsa «Aceptar» en el aviso de cookies, cargamos Google Tag
+            Manager, la herramienta de Google con la que gestionamos la
+            medición del sitio web. Google Tag Manager no instala cookies por
+            sí mismo, pero a través de él podemos activar Google Analytics, que
+            utiliza las siguientes:
+          </p>
+                      <table class="cookie-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Titular</th>
+                  <th>Finalidad</th>
+                  <th>Duración</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Nombre"><strong>_ga</strong></td>
+                  <td data-label="Titular">Google</td>
+                  <td data-label="Finalidad">Distinguir a los visitantes de forma seudonimizada</td>
+                  <td data-label="Duración">2 años</td>
+                </tr>
+                <tr>
+                  <td data-label="Nombre"><strong>_ga_&lt;ID&gt;</strong></td>
+                  <td data-label="Titular">Google</td>
+                  <td data-label="Finalidad">Mantener el estado de la sesión de medición</td>
+                  <td data-label="Duración">2 años</td>
+                </tr>
+              </tbody>
+            </table>
+          <p>
+            Con su consentimiento también registramos las pulsaciones en los
+            botones de llamada, WhatsApp, email y en los principales botones de
+            la página. Si rechaza las cookies analíticas, no se carga ninguna
+            de estas herramientas.
           </p>
 
-          <h3>2.2. Cookies de Preferencias</h3>
+          <h3>4.3. Contenidos de terceros insertados</h3>
           <p>
-            Permiten recordar información que cambia la forma en que se comporta
-            o se ve el sitio web, como su idioma preferido o la región en la que
-            se encuentra.
+            La página de inicio muestra un mapa de las zonas de servicio
+            insertado desde Google Maps. Al cargarse, Google recibe la
+            dirección IP y los datos técnicos de su navegador y puede instalar
+            o leer sus propias cookies (por ejemplo, <strong>NID</strong>, o las
+            de su cuenta si ha iniciado sesión en Google). Estas cookies las
+            gestiona Google conforme a su
+            <a
+              href="https://policies.google.com/technologies/cookies?hl=es"
+              target="_blank"
+              rel="noopener"
+              >política de cookies</a
+            >.
+          </p>
+          <p>
+            Los enlaces a WhatsApp, Facebook e Instagram no instalan cookies en
+            este sitio web. Si los pulsa, accederá a servicios de Meta, que
+            aplican sus propias políticas.
           </p>
 
-          <h3>2.3. Cookies Analíticas</h3>
+          <h2>5. Cómo Aceptar, Rechazar o Cambiar su Elección</h2>
+          <h3>5.1. Aviso de cookies</h3>
           <p>
-            Nos ayudan a entender cómo los visitantes interactúan con el sitio
-            web, recopilando y reportando información de forma anónima. Estas
-            cookies requieren consentimiento.
+            En su primera visita a la página de inicio se muestra un aviso con
+            dos botones al mismo nivel: «Aceptar», que activa las cookies
+            analíticas, y «Solo necesarias», que las rechaza. Hasta que elija,
+            no se carga ninguna cookie analítica. Seguir navegando sin pulsar
+            ninguno de los dos no equivale a aceptar.
+          </p>
+          <p>
+            Puede cambiar de elección o retirar su consentimiento en cualquier
+            momento mediante el enlace «Gestionar cookies» del pie de página de
+            la página de inicio, que vuelve a mostrar el aviso. Retirar el
+            consentimiento no afecta a la licitud del tratamiento realizado
+            antes. Las cookies analíticas que ya estuvieran instaladas dejan
+            de utilizarse y puede eliminarlas desde la configuración de su
+            navegador.
           </p>
 
-          <h3>2.4. Cookies de Marketing</h3>
+          <h3>5.2. Configuración del navegador</h3>
           <p>
-            Se utilizan para hacer un seguimiento de los visitantes a través de
-            los sitios web. La intención es mostrar anuncios relevantes y
-            atractivos para el usuario individual. Requieren consentimiento.
-          </p>
-
-          <h2>3. Cookies que utilizamos</h2>
-          <p>
-            A continuación, detallamos las cookies específicas que utilizamos en
-            nuestro sitio web:
-          </p>
-
-          <table class="cookie-table">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Finalidad</th>
-                <th>Duración</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>session_id</strong></td>
-                <td>Técnica</td>
-                <td>Identificar la sesión del usuario</td>
-                <td>Sesión</td>
-              </tr>
-              <tr>
-                <td><strong>cookie_consent</strong></td>
-                <td>Técnica</td>
-                <td>Almacenar preferencias de cookies</td>
-                <td>1 año</td>
-              </tr>
-              <tr>
-                <td><strong>_ga</strong></td>
-                <td>Analítica</td>
-                <td>Distinguir usuarios (Google Analytics)</td>
-                <td>2 años</td>
-              </tr>
-              <tr>
-                <td><strong>_gid</strong></td>
-                <td>Analítica</td>
-                <td>Distinguir usuarios (Google Analytics)</td>
-                <td>24 horas</td>
-              </tr>
-              <tr>
-                <td><strong>_gat</strong></td>
-                <td>Analítica</td>
-                <td>Limitar solicitudes (Google Analytics)</td>
-                <td>1 minuto</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2>4. Cookies de Terceros</h2>
-          <p>Algunos de nuestros servicios utilizan cookies de terceros:</p>
-
-          <h3>4.1. Google Analytics</h3>
-          <p>
-            Utilizamos Google Analytics para analizar el uso del sitio web.
-            Google Analytics genera estadísticas y otra información mediante
-            cookies almacenadas en ordenadores de los usuarios.
+            También puede bloquear o eliminar las cookies desde su navegador.
+            Estas son las instrucciones de los más utilizados:
           </p>
           <ul>
-            <li><strong>Proveedor:</strong> Google LLC</li>
-            <li><strong>Finalidad:</strong> Análisis de tráfico web</li>
             <li>
-              <strong>Más información:</strong>
               <a
-                href="https://policies.google.com/privacy"
+                href="https://support.google.com/chrome/answer/95647?hl=es"
                 target="_blank"
                 rel="noopener"
-                >Política de Privacidad de Google</a
-              >
-            </li>
-            <li>
-              <strong>Desactivar:</strong>
-              <a
-                href="https://tools.google.com/dlpage/gaoptout"
-                target="_blank"
-                rel="noopener"
-                >Complemento de inhabilitación de Google Analytics</a
-              >
-            </li>
-          </ul>
-
-          <h3>4.2. Facebook Pixel</h3>
-          <p>
-            Utilizamos Facebook Pixel para medir la efectividad de nuestra
-            publicidad.
-          </p>
-          <ul>
-            <li><strong>Proveedor:</strong> Meta Platforms Inc.</li>
-            <li><strong>Finalidad:</strong> Marketing y publicidad</li>
-            <li>
-              <strong>Más información:</strong>
-              <a
-                href="https://www.facebook.com/privacy/explanation"
-                target="_blank"
-                rel="noopener"
-                >Política de Privacidad de Facebook</a
-              >
-            </li>
-          </ul>
-
-          <h2>5. ¿Cómo gestionar las Cookies?</h2>
-          <p>
-            Puede controlar y/o eliminar las cookies según desee. Puede eliminar
-            todas las cookies que ya están en su ordenador y configurar la
-            mayoría de los navegadores para que no se instalen.
-          </p>
-
-          <h3>5.1. Configuración del Banner de Cookies</h3>
-          <p>
-            Al acceder por primera vez a nuestro sitio web, se muestra un banner
-            informativo donde puede:
-          </p>
-          <ul>
-            <li>Aceptar todas las cookies</li>
-            <li>Rechazar cookies no esenciales</li>
-            <li>Configurar sus preferencias de cookies</li>
-          </ul>
-
-          <h3>5.2. Configuración del Navegador</h3>
-          <p>
-            Puede configurar su navegador para que rechace cookies o le avise
-            cuando se envíen. A continuación, le indicamos cómo hacerlo en los
-            navegadores más comunes:
-          </p>
-
-          <ul>
-            <li>
-              <strong>Chrome:</strong> Configuración > Privacidad y seguridad >
-              Cookies y otros datos de sitios
-            </li>
-            <li>
-              <strong>Firefox:</strong> Opciones > Privacidad y seguridad >
-              Cookies y datos del sitio
-            </li>
-            <li>
-              <strong>Safari:</strong> Preferencias > Privacidad > Cookies y
-              datos de sitios web
-            </li>
-            <li>
-              <strong>Edge:</strong> Configuración > Cookies y permisos del
-              sitio
-            </li>
-            <li>
-              <strong>Opera:</strong> Configuración > Avanzado > Privacidad y
-              seguridad > Cookies
-            </li>
-          </ul>
-
-          <p>
-            Para más información sobre cómo gestionar cookies en dispositivos
-            móviles y otros navegadores, consulte la documentación de su
-            dispositivo o navegador.
-          </p>
-
-          <h2>6. Consecuencias de Desactivar las Cookies</h2>
-          <p>
-            Si decide desactivar las cookies, algunas funcionalidades de nuestro
-            sitio web pueden no estar disponibles o no funcionar correctamente:
-          </p>
-          <ul>
-            <li>No se recordarán sus preferencias</li>
-            <li>Puede que tenga que volver a iniciar sesión en cada visita</li>
-            <li>Algunas características del sitio pueden no funcionar</li>
-          </ul>
-
-          <p>
-            Las cookies técnicas son necesarias para el funcionamiento del sitio
-            web y no pueden desactivarse.
-          </p>
-
-          <h2>7. Base Legal</h2>
-          <p>El uso de cookies está regulado por:</p>
-          <ul>
-            <li>
-              <strong>RGPD:</strong> Reglamento (UE) 2016/679 del Parlamento
-              Europeo y del Consejo
-            </li>
-            <li>
-              <strong>LOPDGDD:</strong> Ley Orgánica 3/2018, de 5 de diciembre
-            </li>
-            <li>
-              <strong>LSSI-CE:</strong> Ley 34/2002, de 11 de julio, de
-              Servicios de la Sociedad de la Información
-            </li>
-            <li>
-              <strong>Directiva ePrivacy:</strong> Directiva 2002/58/CE
-              (modificada por la Directiva 2009/136/CE)
-            </li>
-          </ul>
-
-          <h2>8. Actualizaciones de la Política</h2>
-          <p>
-            Esta Política de Cookies puede actualizarse periódicamente. Le
-            recomendamos revisarla regularmente. La fecha de última
-            actualización se muestra al inicio del documento.
-          </p>
-          <p>
-            Si realizamos cambios materiales en esta política, le notificaremos
-            mediante un aviso destacado en nuestro sitio web antes de que los
-            cambios entren en vigor.
-          </p>
-
-          <h2>9. Más Información</h2>
-          <p>
-            Para más información sobre nuestras prácticas de privacidad,
-            consulte nuestra
-            <a href="/politica-privacidad/">Política de Privacidad</a>.
-          </p>
-          <p>
-            Para cualquier consulta sobre el uso de cookies, puede contactarnos:
-          </p>
-          <ul>
-            <li><strong>Email:</strong> info@merafex.es</li>
-            <li><strong>Teléfono:</strong> 611 37 54 95</li>
-          </ul>
-
-          <h2>10. Enlaces Útiles</h2>
-          <ul>
-            <li>
-              <a href="https://www.aepd.es" target="_blank" rel="noopener"
-                >Agencia Española de Protección de Datos</a
+                >Google Chrome</a
               >
             </li>
             <li>
               <a
-                href="http://www.aboutcookies.org"
+                href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias"
                 target="_blank"
                 rel="noopener"
-                >Información sobre cookies (AboutCookies.org)</a
+                >Mozilla Firefox</a
               >
             </li>
             <li>
               <a
-                href="https://www.youronlinechoices.eu"
+                href="https://support.apple.com/es-es/guide/safari/sfri11471/mac"
                 target="_blank"
                 rel="noopener"
-                >Your Online Choices</a
+                >Safari</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+                target="_blank"
+                rel="noopener"
+                >Microsoft Edge</a
               >
             </li>
           </ul>
+          <p>
+            Para impedir la medición de Google Analytics en todos los sitios
+            web puede instalar el
+            <a
+              href="https://tools.google.com/dlpage/gaoptout?hl=es"
+              target="_blank"
+              rel="noopener"
+              >complemento de inhabilitación de Google Analytics</a
+            >.
+          </p>
+
+          <h2>6. Qué Ocurre si Rechaza las Cookies</h2>
+          <p>
+            El sitio web funciona por completo aunque rechace las cookies
+            analíticas. Si bloquea en su navegador también las técnicas, el
+            aviso de cookies volverá a aparecer en cada visita y es posible que
+            el formulario de contacto no supere la verificación anti-spam. En
+            ese caso puede contactarnos por teléfono, WhatsApp o email.
+          </p>
+
+          <h2>7. Transferencias Internacionales</h2>
+          <p>
+            Google y Cloudflare pueden tratar los datos obtenidos mediante
+            cookies fuera del Espacio Económico Europeo, con las garantías
+            descritas en el apartado de transferencias internacionales de
+            nuestra <a href="/politica-privacidad/">Política de Privacidad</a>.
+          </p>
+
+          <h2>8. Normativa Aplicable</h2>
+          <ul>
+            <li>
+              Artículo 22.2 de la Ley 34/2002, de 11 de julio, de servicios de
+              la sociedad de la información y de comercio electrónico
+              (LSSI-CE).
+            </li>
+            <li>
+              Reglamento (UE) 2016/679, General de Protección de Datos (RGPD).
+            </li>
+            <li>
+              Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos
+              Personales y garantía de los derechos digitales (LOPDGDD).
+            </li>
+            <li>
+              Directiva 2002/58/CE, sobre la privacidad y las comunicaciones
+              electrónicas, modificada por la Directiva 2009/136/CE.
+            </li>
+            <li>
+              <a
+                href="https://www.aepd.es/guias/guia-cookies.pdf"
+                target="_blank"
+                rel="noopener"
+                >Guía sobre el uso de las cookies</a
+              >
+              de la Agencia Española de Protección de Datos.
+            </li>
+          </ul>
+
+          <h2>9. Actualizaciones de esta Política</h2>
+          <p>
+            Actualizaremos esta política cuando cambien las cookies que
+            utilizamos. La fecha de la última actualización figura al inicio
+            del documento. Si incorporamos cookies que requieran
+            consentimiento con una finalidad distinta, le volveremos a pedir
+            su consentimiento.
+          </p>
+
+          <h2>10. Más Información</h2>
+          <p>
+            Para saber cómo tratamos sus datos personales y cómo ejercer sus
+            derechos, consulte nuestra
+            <a href="/politica-privacidad/">Política de Privacidad</a>. Para
+            cualquier consulta sobre cookies puede escribirnos a
+            info@merafex.es o llamarnos al 611 37 54 95.
+          </p>
 
           <div
             style="
