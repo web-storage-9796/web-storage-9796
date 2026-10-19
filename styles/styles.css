@@ -236,6 +236,12 @@ img {
   margin: 0 auto;
 }
 
+.section-description a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .section-description.white {
   color: rgba(255, 255, 255, 0.74);
 }
@@ -2236,6 +2242,11 @@ nav a:has(.fa-whatsapp) {
   min-height: 380px;
   background: var(--white);
   overflow: hidden;
+}
+
+/* <Picture> envuelve el <img>: sin caja propia, se maqueta como antes. */
+.star-service-img-col picture {
+  display: contents;
 }
 
 .star-service-photo {

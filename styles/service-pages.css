@@ -143,13 +143,6 @@ main {
   width: 100%;
 }
 
-.service-hero::after {
-  background:
-    linear-gradient(90deg, rgba(11, 21, 48, 0.96) 0%, rgba(11, 21, 48, 0.82) 30%, rgba(11, 31, 77, 0.45) 65%, rgba(11, 31, 77, 0.2) 100%),
-    linear-gradient(0deg, rgba(11, 21, 48, 0.6) 0%, transparent 40%);
-  content: "";
-}
-
 .service-hero--photo .service-hero-image {
   opacity: 1;
 }
@@ -679,7 +672,7 @@ main {
   opacity: 1;
 }
 
-.service-brand-logo img[src$="mul-t-lock.png"] {
+.service-brand-logo img[data-brand="mul-t-lock"] {
   margin-bottom: 0.5rem;
   transform: scale(1.25) translateY(-0.2rem);
 }
@@ -702,6 +695,20 @@ main {
   height: 170px;
   object-fit: contain;
   width: 170px;
+}
+
+.service-section-intro picture {
+  display: contents;
+}
+
+.service-section-photo {
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  box-shadow: var(--service-shadow);
+  flex: none;
+  height: auto;
+  object-fit: cover;
+  width: min(32%, 320px);
 }
 
 .service-section--compact {
@@ -1027,6 +1034,11 @@ main {
     align-items: flex-start;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .service-section-photo {
+    align-self: center;
+    width: min(100%, 300px);
   }
 
   .service-section-image {
