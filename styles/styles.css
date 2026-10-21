@@ -1956,6 +1956,34 @@ nav a:has(.fa-whatsapp) {
   border: 1px solid #fca5a5;
 }
 
+/* Respaldo si el envío falla: llamar o abrir WhatsApp con el mensaje preparado */
+.form-fallback {
+  display: grid;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  text-align: center;
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+  color: #7c2d12;
+}
+
+.form-fallback[hidden] {
+  display: none;
+}
+
+.form-fallback p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.form-fallback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
 @keyframes form-message-in {
   from {
     opacity: 0;

@@ -538,10 +538,53 @@ function initPhoneFieldEnhancements() {
 }
 
 const FORM_SUBMIT_TIMEOUT_MS = 20000;
+const WHATSAPP_PREFILL_MAX_MESSAGE = 1500;
+
+// Si el envío falla, el usuario puede llamar o abrir WhatsApp con su mensaje ya redactado.
+function buildWhatsappFallbackUrl(base, labels, data) {
+    const line = (label, value) => (value ? `${label}: ${value}` : '');
+    const message = data.message.length > WHATSAPP_PREFILL_MAX_MESSAGE
+        ? data.message.slice(0, WHATSAPP_PREFILL_MAX_MESSAGE) + '…'
+        : data.message;
+
+    const text = [
+        labels.intro,
+        '',
+        line(labels.name, data.name),
+        line(labels.phone, data.phone),
+        line(labels.email, data.email),
+        line(labels.postalcode, data.postalcode),
+        line(labels.message, message)
+    ].filter((entry, index) => index === 1 || entry).join('\n');
+
+    return base + '?text=' + encodeURIComponent(text);
+}
+
+function showSendFallback(data) {
+    const fallback = document.getElementById('form-fallback');
+    const whatsapp = fallback?.querySelector('[data-form-fallback-whatsapp]');
+    if (!fallback || !whatsapp) return;
+
+    whatsapp.href = buildWhatsappFallbackUrl(whatsapp.dataset.base, {
+        intro: fallback.dataset.waIntro,
+        name: fallback.dataset.waName,
+        phone: fallback.dataset.waPhone,
+        email: fallback.dataset.waEmail,
+        postalcode: fallback.dataset.waPostalcode,
+        message: fallback.dataset.waMessage
+    }, data);
+    fallback.hidden = false;
+}
+
+function hideSendFallback() {
+    const fallback = document.getElementById('form-fallback');
+    if (fallback) fallback.hidden = true;
+}
 
 async function submitForm(data, endpoint) {
     const form = document.getElementById('contact-form');
     const submitBtn = form.querySelector('button[type="submit"]');
+    hideSendFallback();
     const originalBtnText = submitBtn.textContent.trim() || 'Enviar Mensaje';
     
     // Show loading state
@@ -597,9 +640,10 @@ async function submitForm(data, endpoint) {
     } catch (error) {
         console.error('Contact form submission error:', error);
         showFormMessage(
-            'No hemos podido enviar tu mensaje. Intenta de nuevo en unos minutos.',
+            form.dataset.error || 'No hemos podido enviar tu mensaje. Intenta de nuevo en unos minutos.',
             'error'
         );
+        showSendFallback(data);
         trackEvent('Contact', 'Form Submit', 'Error');
 
     } finally {
@@ -989,9 +1033,16 @@ function initAnalyticsTracking() {
         });
     });
 
-    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    document.querySelectorAll('a[href*="wa.me"]:not([data-form-fallback-whatsapp])').forEach(link => {
         link.addEventListener('click', function() {
             trackEvent('Contact', 'WhatsApp Click', this.getAttribute('href'));
+        });
+    });
+
+    // El enlace de respaldo del formulario lleva datos personales en la URL: se registra sin ella.
+    document.querySelectorAll('[data-form-fallback-whatsapp]').forEach(link => {
+        link.addEventListener('click', function() {
+            trackEvent('Contact', 'WhatsApp Click', this.dataset.base);
         });
     });
 
