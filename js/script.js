@@ -537,6 +537,8 @@ function initPhoneFieldEnhancements() {
     });
 }
 
+const FORM_SUBMIT_TIMEOUT_MS = 20000;
+
 async function submitForm(data, endpoint) {
     const form = document.getElementById('contact-form');
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -549,21 +551,30 @@ async function submitForm(data, endpoint) {
     
     try {
         const payload = {
-            "Nombre": data.name,
-            "Teléfono": data.phone,
-            "Email": data.email,
-            "Código Postal": data.postalcode || 'No indicado',
-            "Mensaje": data.message
+            name: data.name,
+            phone: data.phone,
+            email: data.email,
+            postalcode: data.postalcode,
+            message: data.message,
+            subject: form.querySelector('input[name="subject"]')?.value || '',
+            turnstileToken: data.turnstileToken
         };
 
-        const response = await fetch(endpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        });
+        // Apps Script no responde al preflight CORS: text/plain evita que el navegador lo envíe.
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), FORM_SUBMIT_TIMEOUT_MS);
+
+        let response;
+        try {
+            response = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify(payload),
+                signal: controller.signal
+            });
+        } finally {
+            clearTimeout(timeoutId);
+        }
 
         let result = null;
         try {
@@ -572,12 +583,8 @@ async function submitForm(data, endpoint) {
             result = null;
         }
 
-        const providerRejected = Boolean(
-            result && (result.success === false || result.success === 'false' || result.ok === false)
-        );
-
-        if (!response.ok || providerRejected) {
-            throw new Error('Form provider rejected submission');
+        if (!response.ok || !result || result.success !== true) {
+            throw new Error('Form backend rejected submission: ' + (result?.error || response.status));
         }
 
         showFormMessage(
@@ -585,7 +592,6 @@ async function submitForm(data, endpoint) {
             'success'
         );
         form.reset();
-        resetTurnstileWidget(form);
         trackEvent('Contact', 'Form Submit', 'Success');
 
     } catch (error) {
@@ -597,6 +603,9 @@ async function submitForm(data, endpoint) {
         trackEvent('Contact', 'Form Submit', 'Error');
 
     } finally {
+        // El token de Turnstile es de un solo uso: hay que renovarlo también tras un error.
+        resetTurnstileWidget(form);
+
         submitBtn.disabled = false;
         submitBtn.textContent = originalBtnText;
         submitBtn.removeAttribute('aria-busy');
