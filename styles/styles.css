@@ -339,6 +339,27 @@ nav a:has(.fa-whatsapp) {
   font-size: 1.125rem;
 }
 
+.btn[aria-busy="true"] {
+  cursor: progress;
+}
+
+.btn[aria-busy="true"]::before {
+  content: "";
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: btn-spinner 0.7s linear infinite;
+}
+
+@keyframes btn-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* ===================================
    Header & Navigation (páginas legales; el resto usa navbar.css)
    =================================== */

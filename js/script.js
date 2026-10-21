@@ -539,7 +539,7 @@ function initPhoneFieldEnhancements() {
 
 async function submitForm(data, endpoint) {
     const form = document.getElementById('contact-form');
-    const submitBtn = form.querySelector('.btn-submit');
+    const submitBtn = form.querySelector('button[type="submit"]');
     const originalBtnText = submitBtn.textContent.trim() || 'Enviar Mensaje';
     
     // Show loading state
