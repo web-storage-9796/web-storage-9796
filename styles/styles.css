@@ -1979,55 +1979,6 @@ nav a:has(.fa-whatsapp) {
    Scroll to Top Button
    =================================== */
 
-.scroll-top {
-  position: fixed;
-  bottom: calc(2rem + var(--scroll-top-offset));
-  right: 2rem;
-  width: 48px;
-  height: 48px;
-  background: var(--primary-dark);
-  color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: var(--shadow-lg);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px) scale(0.9);
-  transition:
-    opacity var(--transition-base),
-    visibility var(--transition-base),
-    transform var(--transition-base),
-    background-color var(--transition-base),
-    color var(--transition-base),
-    bottom var(--transition-base);
-  z-index: 1201;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.scroll-top i {
-  pointer-events: none;
-  transition: transform var(--transition-base);
-}
-
-.scroll-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-}
-
-.scroll-top:hover {
-  background: var(--accent-color);
-  color: var(--primary-dark);
-  transform: translateY(-3px);
-}
-
-.scroll-top:hover i {
-  transform: translateY(-2px);
-}
 
 .mobile-cta-widget {
   display: none;
@@ -2519,11 +2470,6 @@ nav a:has(.fa-whatsapp) {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .scroll-top {
-    right: 1rem;
-    bottom: calc(1rem + var(--scroll-top-offset));
-  }
-
   .cookie-banner {
     left: 0;
     right: 0;
@@ -2761,13 +2707,6 @@ nav a:has(.fa-whatsapp) {
   .service-card--with-image {
     padding: 0;
   }
-
-  .scroll-top {
-    bottom: calc(1rem + var(--scroll-top-offset));
-    right: 1rem;
-    width: 44px;
-    height: 44px;
-  }
 }
 
 /* Mobile Scroll-Top Adjustment */
@@ -2827,11 +2766,6 @@ nav a:has(.fa-whatsapp) {
     outline: 3px solid var(--accent-color);
     outline-offset: 3px;
   }
-
-  .scroll-top {
-    bottom: calc(1rem + var(--scroll-top-offset));
-    right: 1rem;
-  }
 }
 
 /* Desktop Large */
@@ -2859,8 +2793,7 @@ nav a:has(.fa-whatsapp) {
 @media print {
   .header,
   .hero-buttons,
-  .contact-form-wrapper,
-  .scroll-top {
+  .contact-form-wrapper {
     display: none;
   }
 }

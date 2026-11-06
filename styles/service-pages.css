@@ -136,6 +136,13 @@ main {
   position: absolute;
 }
 
+/* Sin content, el ::after no se genera y el degradado de las fotos de
+   barrio no llega a pintarse sobre la imagen. */
+.service-hero::after {
+  content: "";
+  pointer-events: none;
+}
+
 .service-hero-image {
   height: 100%;
   object-fit: cover;
@@ -653,11 +660,10 @@ main {
 
 .service-brand-logo img {
   display: block;
-  filter: grayscale(1);
   height: 58px;
   object-fit: contain;
   opacity: 0.75;
-  transition: filter 420ms var(--service-ease), opacity 420ms var(--service-ease);
+  transition: opacity 420ms var(--service-ease);
   width: min(100%, 170px);
 }
 
@@ -668,7 +674,6 @@ main {
 }
 
 .service-brand-logo:hover img {
-  filter: grayscale(0);
   opacity: 1;
 }
 
