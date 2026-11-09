@@ -72,17 +72,4 @@ document.addEventListener("DOMContentLoaded", function () {
       question.setAttribute("aria-expanded", String(!wasActive));
     });
   });
-
-  var phone = document.querySelector('a[href^="tel:"]');
-  var whatsapp = document.querySelector('a[href^="https://wa.me/"]');
-
-  if (phone && whatsapp) {
-    var contactBar = document.createElement("aside");
-    contactBar.className = "service-mobile-contact";
-    contactBar.setAttribute("aria-label", "Contacto rápido");
-    contactBar.innerHTML =
-      '<a href="' + phone.getAttribute("href") + '">Llamar ahora</a>' +
-      '<a href="' + whatsapp.getAttribute("href") + '">WhatsApp</a>';
-    document.body.appendChild(contactBar);
-  }
 });

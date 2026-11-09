@@ -160,6 +160,24 @@ main {
     linear-gradient(0deg, rgba(11, 21, 48, 0.5) 0%, transparent 40%);
 }
 
+.service-hero-credit {
+  bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.7rem;
+  line-height: 1.2;
+  position: absolute;
+  right: 0.75rem;
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.service-hero-credit:hover,
+.service-hero-credit:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .service-hero--photo .service-eyebrow,
 .service-hero--photo h1,
 .service-hero--photo .service-lede {
@@ -1109,6 +1127,7 @@ main {
     font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
     font-size: 0.92rem;
     font-weight: 800;
+    gap: 0.55rem;
     justify-content: center;
     min-height: 48px;
     text-decoration: none;
@@ -1117,6 +1136,16 @@ main {
 
   .service-mobile-contact a:active {
     transform: scale(0.97);
+  }
+
+  .service-mobile-contact i {
+    font-size: 1.05em;
+  }
+
+  /* El botón "volver arriba" sube por encima de la barra fija para no taparla:
+     alto de los botones (48px) + relleno vertical de la barra + margen. */
+  .service-mobile-contact ~ .scroll-top {
+    bottom: calc(48px + 1.4rem + 0.75rem + env(safe-area-inset-bottom) + var(--scroll-top-offset));
   }
 
   .service-mobile-contact a:last-child {
