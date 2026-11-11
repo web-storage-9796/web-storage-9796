@@ -1,9 +1,13 @@
+# Las páginas legales no se bloquean aquí: llevan <meta name="robots"
+# content="noindex, follow">, y un Disallow impediría que los buscadores lo lean.
 User-agent: *
 Allow: /
-Disallow: /aviso-legal/
-Disallow: /condiciones-uso/
-Disallow: /politica-cookies/
-Disallow: /politica-privacidad/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 User-agent: GPTBot
 Allow: /
@@ -17,16 +21,31 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: CCBot
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 User-agent: Amazonbot
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://merafex.es/sitemap.xml

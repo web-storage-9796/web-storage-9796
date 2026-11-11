@@ -124,6 +124,33 @@
   transition: color 320ms var(--footer-ease), background-size 420ms var(--footer-ease);
 }
 .footer-list a:hover { background-size: 100% 1px; color: #fff; }
+.footer-links {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 2.5rem 0;
+  padding-top: 2.5rem;
+}
+.footer-links-list {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-links-list a {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 320ms var(--footer-ease);
+}
+.footer-links-list a:hover { color: #fff; text-decoration: underline; }
+.footer-company { font-size: 0.8rem; }
+@media (max-width: 768px) {
+  .footer-links { grid-template-columns: 1fr; }
+}
 .footer-bottom { font-size: 0.85rem; padding-top: 0; text-align: center; }
 .footer-bottom p { margin: 0 0 1rem; }
 

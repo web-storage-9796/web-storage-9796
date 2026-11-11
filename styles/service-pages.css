@@ -301,6 +301,73 @@ main {
   padding-bottom: 5rem;
 }
 
+.service-price-table {
+  margin: 1.5rem 0 0;
+  overflow-x: auto;
+}
+
+.service-price-table table {
+  background: #fff;
+  border: 1px solid var(--service-line);
+  border-collapse: separate;
+  border-radius: 14px;
+  border-spacing: 0;
+  box-shadow: var(--service-shadow-sm);
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.service-price-table caption {
+  color: var(--service-ink);
+  font-weight: 700;
+  padding: 0 0 0.75rem;
+  text-align: left;
+}
+
+.service-price-table th,
+.service-price-table td {
+  border-bottom: 1px solid var(--service-line);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.service-price-table thead th {
+  background: var(--service-tint);
+  color: var(--service-navy);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.service-price-table tbody th {
+  color: var(--service-ink);
+  font-weight: 600;
+}
+
+.service-price-table td {
+  color: var(--service-ink);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.service-price-table tbody tr:last-child th,
+.service-price-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.service-price-note {
+  color: var(--service-muted);
+  font-size: 0.9rem;
+  margin: 0.75rem 0 0;
+}
+
+.service-updated {
+  color: var(--service-muted);
+  font-size: 0.9rem;
+  margin: 2rem 0 0;
+  text-align: right;
+}
+
 .service-home-action {
   display: flex;
   justify-content: center;
