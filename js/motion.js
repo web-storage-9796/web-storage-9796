@@ -13,6 +13,20 @@
     window.addEventListener("scroll", syncHeader, { passive: true });
   }
 
+  // La cabecera es fija: el contenido que va debajo (hero, main) se desplaza
+  // --navbar-height. Se copia aquí su altura real, porque el menú puede
+  // partirse en varias líneas según el ancho o el idioma.
+  var navbar = document.querySelector(".main-navbar");
+
+  if (navbar && "ResizeObserver" in window) {
+    new ResizeObserver(function () {
+      document.documentElement.style.setProperty(
+        "--navbar-height",
+        navbar.getBoundingClientRect().height + "px"
+      );
+    }).observe(navbar);
+  }
+
   var prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
   ).matches;

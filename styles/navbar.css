@@ -1,3 +1,18 @@
+/* Altura de la cabecera fija. El contenido (hero o main) se desplaza esta
+   misma cantidad. Estos valores son solo la reserva inicial: motion.js los
+   sustituye por la altura real, que cambia cuando el menú se parte en dos
+   líneas (entre ~780 y ~1260 px, y más en inglés). Con 69 px fijos la foto
+   del hero quedaba unos píxeles debajo del navbar. */
+:root {
+  --navbar-height: 74px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 69px;
+  }
+}
+
 .main-navbar {
   --navbar-primary: #1e3a8a;
   --navbar-primary-light: #2f5bd3;

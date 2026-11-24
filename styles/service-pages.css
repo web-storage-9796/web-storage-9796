@@ -114,7 +114,7 @@ a {
 }
 
 main {
-  padding-top: 69px;
+  padding-top: var(--navbar-height, 69px);
 }
 
 /* ===================================
@@ -801,6 +801,12 @@ main {
   width: min(32%, 320px);
 }
 
+.service-section-photo--wide {
+  aspect-ratio: 1488 / 919;
+  object-fit: contain;
+  width: min(46%, 460px);
+}
+
 .service-section--compact {
   padding-bottom: 1rem;
 }
@@ -1129,6 +1135,10 @@ main {
   .service-section-photo {
     align-self: center;
     width: min(100%, 300px);
+  }
+
+  .service-section-photo--wide {
+    width: 100%;
   }
 
   .service-section-image {
